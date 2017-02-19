@@ -1,0 +1,18 @@
+{
+    "route" : "/",
+    "name" : "root",
+    "child" : [{
+        "route" : "index|admin|main",
+        "name" : "首页",
+        "type" : "html",
+        "view" : "",
+        "child" : [{
+                "route" : "user",
+                "name" : "",
+                "type" : "mock",
+                "datatype" : "json",
+                "view" : "",
+                "child" : []
+        }]
+    }]
+}
