@@ -6,7 +6,7 @@
   font-family: Lato,Microsoft YaHei,Arial;
 }
 a {
-  color: #fff;
+  color: #CCC6B2;
   text-decoration: none;
 }
 li {
@@ -28,10 +28,30 @@ body .page-main {
   position: fixed;
   top: 51px;
   bottom: 26px;
-  left: 0px;
+  left: 38px;
   width: 100%;
   background: #423a3a;
   color: #fff;
+}
+body .page-main .left-bar {
+  position: absolute;
+  left: -38px;
+  width: 38px;
+  height: 100%;
+  background: #252424;
+}
+body .page-main .left-bar li {
+  text-align: center;
+  padding: 10px 0;
+}
+body .page-main .left-bar li.top-btn {
+  padding: 10px 0;
+}
+body .page-main .left-bar li.active {
+  background: #111111;
+}
+body .page-main .left-bar li:not(.active):hover {
+  background: #2c2a2a;
 }
 body .page-main .code-edit {
   position: relative;
@@ -39,7 +59,7 @@ body .page-main .code-edit {
   padding: 0 5px 0 0;
   float: left;
   height: 100%;
-  background: #373636;
+  background: #252526;
 }
 body .page-main .code-edit > div.cont {
   box-sizing: border-box;
@@ -58,7 +78,7 @@ body .page-main .code-left .tree {
 body .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #535050;
+  background: #373737;
 }
 body .page-main .code-left .tree .tree-cont {
   position: absolute;
@@ -67,7 +87,6 @@ body .page-main .code-left .tree .tree-cont {
   right: 0px;
   left: 0px;
   overflow-y: auto;
-  padding: 5px;
   box-sizing: border-box;
   font-size: 13px;
 }
@@ -80,13 +99,15 @@ body .page-main .code-left .tree .tree-cont .tree-node .node-icon {
   position: relative;
   top: -2px;
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background: url(../images/jia.png) no-repeat;
+  background-size: 12px 12px;
   vertical-align: middle;
 }
 body .page-main .code-left .tree .tree-cont .tree-node .jian {
   background: url(../images/jian.png) no-repeat;
+  background-size: 12px 12px;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li {
   position: relative;
@@ -110,16 +131,13 @@ body .page-main .code-left .tree .tree-cont .tree-node > ul > li span .node-pre-
   width: 10px;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span.checked {
-  background: #252424;
+  background: #222222;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span.checked a {
   color: #ff9800;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span:hover {
-  background: #252424;
-}
-body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span:hover a {
-  color: #ff9800;
+  background: #2A2D2E;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > .tree-line {
   width: 12px;

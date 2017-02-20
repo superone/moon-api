@@ -20,12 +20,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use('*', function (req, res) {
-    router.route.apply(this, arguments);
-    // if(req.originalUrl === "/" ){
-    //   res.render('index', {title:'paint title'});
-    // }else{
-    //   res.end("error! no router : \""+ req.originalUrl +"\"! ");
-    // }
+    //router.route.apply(this, arguments ); 
+    if (req.originalUrl === "/") {
+        res.render('index', { title: 'paint title' });
+    }
+    else {
+        res.end("error! no router : \"" + req.originalUrl + "\"! ");
+    }
 });
 //new Router(app); 
 // catch 404 and forward to error handler

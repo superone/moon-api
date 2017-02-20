@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a733d3e12dad32444087"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "802546bb720841b4b77f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9802,7 +9802,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -10878,6 +10878,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11371,8 +11384,41 @@ if (true) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "page-main"
-  }, [_c('main-left'), _vm._v(" "), _c('main-right')], 1)
-},staticRenderFns: []}
+  }, [_c('main-left'), _vm._v(" "), _c('main-right'), _vm._v(" "), _vm._m(0)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "left-bar"
+  }, [_c('ul', [_c('li', {
+    staticClass: "top-btn"
+  }, [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "/images/icon/double-left-chevron.png?aaa"
+    }
+  })])]), _vm._v(" "), _c('li', {
+    staticClass: "active"
+  }, [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "title": "路由配置",
+      "src": "/images/icon/double-directional-arrow.png"
+    }
+  })])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "/images/icon/config.png"
+    }
+  })])])])])
+}]}
 module.exports.render._withStripped = true
 if (true) {
   module.hot.accept()
