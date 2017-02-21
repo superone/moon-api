@@ -15,13 +15,13 @@ body{
     .page-header{
         position:relative;
         height:50px;
-        background:rgba(44, 80, 117, 0.87);
-        border-bottom:1px solid #2d2b2b;
+        background:#373d51;
+        border-bottom:1px solid #101219;
         .page-logo{
             position:relative;
-            top:5px;
+            top:7px;
             left:8px;
-            height:40px;
+            height:37px;
         }
     }
     .page-main{
@@ -35,28 +35,35 @@ body{
         .left-bar{
             position:absolute;
             left:-38px;
+            top:0px;
             width:38px;
             height:100%;
             background:#252424;
             li{
                 text-align:center;
-                padding:10px 0;
+                a{
+                    display:block;
+                    width:100%;
+                    height:100%;
+                    padding:10px 0;
+                }
             }
             li.top-btn{
-                padding:10px 0;
+                a{
+                    padding:5px 0;
+                }
             }
             li.active{
                 background:#111111;
             }
             li:not(.active):hover{
-                background:#2c2a2a;
+                background:#370f0f;
             }
+            
         }
         .code-edit{
             position:relative;
             box-sizing: border-box;
-            padding: 0 5px 0 0;
-            float:left;
             height:100%;
             background:#252526;
         }
@@ -71,14 +78,16 @@ body{
         .code-edit > div.edit{
         }
         .code-left{
-            width:30%;
+            width:320px;
+            min-width:300px;
+            float:left;
             .tree{
                 height:100%;
                 width:100%;
                 .tree-title{
                     line-height:30px;
                     padding:0 10px;
-                    background:#373737;
+                    background:#232020;
                 }
                 .tree-cont{
                     position: absolute;
@@ -129,16 +138,10 @@ body{
                             }
                         }
                         > ul > li >span.checked{
-                            background:#222222;
-                            a{
-                                color:#ff9800;
-                            }
+                            background:#161616;
                         }
                         > ul > li >span:hover{
-                            background:#2A2D2E;
-                            a{
-                                //color:#ff9800;
-                            }
+                            background:#121111;
                         }
                         > .tree-line{
                             width:12px;
@@ -154,11 +157,10 @@ body{
             }
         }
         .code-right{
-            position: absolute;
-            padding: 0 0 0 5px;
+            //position: absolute;
+            padding: 0 0 0 3px;
             top:0px;
-            width:70%;
-            margin-left:30%;
+            overflow:hidden;
         }
     }
     .page-footer{

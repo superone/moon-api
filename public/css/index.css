@@ -15,14 +15,14 @@ li {
 body .page-header {
   position: relative;
   height: 50px;
-  background: rgba(44, 80, 117, 0.87);
-  border-bottom: 1px solid #2d2b2b;
+  background: #373d51;
+  border-bottom: 1px solid #101219;
 }
 body .page-header .page-logo {
   position: relative;
-  top: 5px;
+  top: 7px;
   left: 8px;
-  height: 40px;
+  height: 37px;
 }
 body .page-main {
   position: fixed;
@@ -36,28 +36,32 @@ body .page-main {
 body .page-main .left-bar {
   position: absolute;
   left: -38px;
+  top: 0px;
   width: 38px;
   height: 100%;
   background: #252424;
 }
 body .page-main .left-bar li {
   text-align: center;
+}
+body .page-main .left-bar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   padding: 10px 0;
 }
-body .page-main .left-bar li.top-btn {
-  padding: 10px 0;
+body .page-main .left-bar li.top-btn a {
+  padding: 5px 0;
 }
 body .page-main .left-bar li.active {
   background: #111111;
 }
 body .page-main .left-bar li:not(.active):hover {
-  background: #2c2a2a;
+  background: #370f0f;
 }
 body .page-main .code-edit {
   position: relative;
   box-sizing: border-box;
-  padding: 0 5px 0 0;
-  float: left;
   height: 100%;
   background: #252526;
 }
@@ -69,7 +73,9 @@ body .page-main .code-edit > div.cont {
   background: #000000;
 }
 body .page-main .code-left {
-  width: 30%;
+  width: 320px;
+  min-width: 300px;
+  float: left;
 }
 body .page-main .code-left .tree {
   height: 100%;
@@ -78,7 +84,7 @@ body .page-main .code-left .tree {
 body .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #373737;
+  background: #232020;
 }
 body .page-main .code-left .tree .tree-cont {
   position: absolute;
@@ -131,13 +137,10 @@ body .page-main .code-left .tree .tree-cont .tree-node > ul > li span .node-pre-
   width: 10px;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span.checked {
-  background: #222222;
-}
-body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span.checked a {
-  color: #ff9800;
+  background: #161616;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > ul > li > span:hover {
-  background: #2A2D2E;
+  background: #121111;
 }
 body .page-main .code-left .tree .tree-cont .tree-node > .tree-line {
   width: 12px;
@@ -149,11 +152,9 @@ body .page-main .code-left .tree .tree-cont .tree-node > .tree-line {
   border-bottom: 1px dashed #423a3a;
 }
 body .page-main .code-right {
-  position: absolute;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 3px;
   top: 0px;
-  width: 70%;
-  margin-left: 30%;
+  overflow: hidden;
 }
 body .page-footer {
   position: fixed;
