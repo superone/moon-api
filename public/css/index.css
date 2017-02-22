@@ -28,36 +28,10 @@ body .page-main {
   position: fixed;
   top: 51px;
   bottom: 26px;
-  left: 38px;
+  left: 50px;
   width: 100%;
   background: #423a3a;
   color: #fff;
-}
-body .page-main .left-bar {
-  position: absolute;
-  left: -38px;
-  top: 0px;
-  width: 38px;
-  height: 100%;
-  background: #252424;
-}
-body .page-main .left-bar li {
-  text-align: center;
-}
-body .page-main .left-bar li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 10px 0;
-}
-body .page-main .left-bar li.top-btn a {
-  padding: 5px 0;
-}
-body .page-main .left-bar li.active {
-  background: #111111;
-}
-body .page-main .left-bar li:not(.active):hover {
-  background: #370f0f;
 }
 body .page-main .code-edit {
   position: relative;
@@ -155,6 +129,32 @@ body .page-main .code-right {
   padding: 0 0 0 3px;
   top: 0px;
   overflow: hidden;
+}
+body .left-bar {
+  position: fixed;
+  left: 0px;
+  top: 51px;
+  width: 50px;
+  height: 100%;
+  background: #252424;
+}
+body .left-bar li {
+  text-align: center;
+}
+body .left-bar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+body .left-bar li.top-btn a {
+  padding: 5px 0;
+}
+body .left-bar li.active {
+  background: #111111;
+}
+body .left-bar li:not(.active):hover {
+  background: #370f0f;
 }
 body .page-footer {
   position: fixed;
