@@ -1,7 +1,8 @@
 "use strict";
-class ConfigRead {
-    constructor(data) {
+var ConfigRead = (function () {
+    function ConfigRead(data) {
         this.config = data;
     }
-}
+    return ConfigRead;
+}());
 //# sourceMappingURL=configurer.js.map

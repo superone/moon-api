@@ -6,7 +6,7 @@
   font-family: Lato,Microsoft YaHei,Arial;
 }
 a {
-  color: #CCC6B2;
+  color: #FEFEFE;
   text-decoration: none;
 }
 li {
@@ -58,7 +58,7 @@ body .page-main .code-left .tree {
 body .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #232020;
+  background: #3a0d0d;
 }
 body .page-main .code-left .tree .tree-cont {
   position: absolute;
@@ -122,8 +122,8 @@ body .page-main .code-left .tree .tree-cont .tree-node > .tree-line {
   top: 26px;
   left: 12px;
   bottom: 12px;
-  border-left: 1px dashed #423a3a;
-  border-bottom: 1px dashed #423a3a;
+  border-left: 1px dashed #777777;
+  border-bottom: 1px dashed #777777;
 }
 body .page-main .code-right {
   padding: 0 0 0 3px;
@@ -136,7 +136,7 @@ body .left-bar {
   top: 51px;
   width: 50px;
   height: 100%;
-  background: #252424;
+  background: #333333;
 }
 body .left-bar li {
   text-align: center;

@@ -1,4 +1,4 @@
-import express = require('express');
+import App = require('../core/App');
 import path = require('path');
 import favicon = require('serve-favicon');
 import logger = require('morgan');
@@ -9,8 +9,8 @@ import ejs = require('ejs');
 import index = require('../../routes/index');
 import { Router } from "../core/router";
 
-var app = express();
-app.locals.mode = "admin";
+var app = new App.App("admin");
+console.log(app.type);
 
 var router = new Router(app);
 
@@ -25,14 +25,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../../public')));
+app.use(App.App.static(path.join(__dirname, '../../public')));
 
 app.use('*', function(req, res){
   //router.route.apply(this, arguments ); 
-    if(req.originalUrl === "/" ){ 
-      res.render('index', {title:'paint title'});
+    if(req.originalUrl === "/" ){
+      res.render('index', {title:'MoonApi'});
     }else{
-      res.end("error! no router : \""+ req.originalUrl +"\"! ");
+      router.route.apply( router ,arguments );
     }
 });
 

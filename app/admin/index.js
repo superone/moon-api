@@ -1,12 +1,12 @@
 "use strict";
-const express = require("express");
-const path = require("path");
-const logger = require("morgan");
-const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const router_1 = require("../core/router");
-var app = express();
-app.locals.mode = "admin";
+var App = require("../core/App");
+var path = require("path");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var router_1 = require("../core/router");
+var app = new App.App("admin");
+console.log(app.type);
 var router = new router_1.Router(app);
 // view engine setup
 app.set('views', path.join(__dirname, '../../resources/views'));
@@ -18,14 +18,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../../public')));
+app.use(App.App.static(path.join(__dirname, '../../public')));
 app.use('*', function (req, res) {
     //router.route.apply(this, arguments ); 
     if (req.originalUrl === "/") {
-        res.render('index', { title: 'paint title' });
+        res.render('index', { title: 'MoonApi' });
     }
     else {
-        res.end("error! no router : \"" + req.originalUrl + "\"! ");
+        router.route.apply(router, arguments);
     }
 });
 //new Router(app); 

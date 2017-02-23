@@ -2,8 +2,8 @@
     <div class='tree'>
         <div class='tree-title'>路由列表</div>
         <div class='tree-cont'>
-            
-            <div class="tree-node">
+            <tree-node v-for="item in treeData" v-bind:tree-data="item"></tree-node>
+            <!--<div class="tree-node">
                 <ul>
                     <li>
                         <span class="checked">
@@ -158,16 +158,59 @@
                     </li>
                 </ul>
                 <div class="tree-line"></div>
-            </div>
+            </div>-->
         </div>
     </div>
 </template>
 
 <script>
+    import treeNode from "./items.vue"
     export default {
+        components:{
+            treeNode
+        },
         data () {
             return {
-                msg: 'Hello World!'
+                treeData : [
+                    {
+                        "nodeId" : "111",
+                        "menuName" : "/(root)",
+                        "route" : "/",
+                        "routeType" : "view:html",
+                        "requestType" : "get",
+                        "child" : [
+                            {
+                                "nodeId" : "111",
+                                "menuName" : "用户中心",
+                                "route" : "/user",
+                                "routeType" : "view:html",
+                                "requestType" : "get",
+                                "child" : [
+                                    {
+                                        "nodeId" : "111",
+                                        "menuName" : "获取用户信息",
+                                        "route" : "/userinfo",
+                                        "routeType" : "restFull:get",
+                                        "requestType" : "get",
+                                        "child" :[
+
+                                        ]
+                                    },
+                                    {
+                                        "nodeId" : "111",
+                                        "menuName" : "更新用户信息",
+                                        "route" : "/userinfo",
+                                        "routeType" : "restFull:post",
+                                        "requestType" : "post",
+                                        "child" :[
+                                            
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

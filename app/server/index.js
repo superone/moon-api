@@ -1,10 +1,10 @@
 "use strict";
-const express = require("express");
-const path = require("path");
-const logger = require("morgan");
-const cookieParser = require("cookie-parser");
-const bodyParser = require("body-parser");
-const router_1 = require("../core/router");
+var express = require("express");
+var path = require("path");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var router_1 = require("../core/router");
 var app = express();
 app.locals.mode = "server";
 var router = new router_1.Router(app);

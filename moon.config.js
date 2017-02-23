@@ -1,11 +1,8 @@
 //moonapi config
 module.exports = {
-    "port" : {
-        "admin" : "9999",
-        "server" : "3000"
-    },
-    "route" : {
-        "admin" : "",
-        "server" : ""
-    }
+    "moonspace" : "/moonspace",
+    "admin-port" : "9999",
+    "server-port" : "3000",
+    "admin-route" : "",
+    "server-route" : ""
 }

@@ -5,15 +5,23 @@
  */
 
 var app = require('../app/server');
+var fs = require('fs');
 var adminapp = require("../app/admin");
 var debug = require('debug')('moonapi:server');
 var http = require('http');
-
+var moonconfig;
 /**
  * Get port from environment and store in Express.
  */
+var state = fs.existsSync(__dirname + "/moon.config.js");
+if( state ){
+  moonconfig = require("../moon.config.js");
+}else{
+  console.log("Moon have not init . can't find the moon.config.js in the root!");
+  return;
+}
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort( moonconfig || '3000');
 var adminport = 9999;
 app.set('port', port);
 adminapp.set('port', adminport);
