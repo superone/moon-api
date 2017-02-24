@@ -4,7 +4,7 @@ import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
-import { Router } from "../core/router";
+import Router from "../core/router";
 
 var app = express();
 app.locals.mode = "server";

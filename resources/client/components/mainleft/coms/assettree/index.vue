@@ -171,46 +171,18 @@
         },
         data () {
             return {
-                treeData : [
-                    {
-                        "nodeId" : "111",
-                        "menuName" : "/(root)",
-                        "route" : "/",
-                        "routeType" : "view:html",
-                        "requestType" : "get",
-                        "child" : [
-                            {
-                                "nodeId" : "111",
-                                "menuName" : "用户中心",
-                                "route" : "/user",
-                                "routeType" : "view:html",
-                                "requestType" : "get",
-                                "child" : [
-                                    {
-                                        "nodeId" : "111",
-                                        "menuName" : "获取用户信息",
-                                        "route" : "/userinfo",
-                                        "routeType" : "restFull:get",
-                                        "requestType" : "get",
-                                        "child" :[
-
-                                        ]
-                                    },
-                                    {
-                                        "nodeId" : "111",
-                                        "menuName" : "更新用户信息",
-                                        "route" : "/userinfo",
-                                        "routeType" : "restFull:post",
-                                        "requestType" : "post",
-                                        "child" :[
-                                            
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                treeData : []
+            }
+        },
+        mounted : function(){
+            this.loadData();
+        },
+        methods : {
+            loadData : function(){
+                var me = this;
+                $.get("/tree.json" , function( data ){
+                    me.treeData = data;
+                });
             }
         }
     }

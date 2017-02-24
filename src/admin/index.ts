@@ -1,18 +1,18 @@
-import App = require('../core/App');
+import App from '../core/App';
+import config from './config';
+import Router  from "./route/index";
+
 import path = require('path');
+import fs = require('fs');
 import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
 import ejs = require('ejs');
 
-import index = require('../../routes/index');
-import { Router } from "../core/router";
 
-var app = new App.App("admin");
-console.log(app.type);
-
-var router = new Router(app);
+var app = new App( config );
+var router = new Router( app );
 
 // view engine setup
 app.set('views', path.join(__dirname, '../../resources/views'));
@@ -25,10 +25,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(App.App.static(path.join(__dirname, '../../public')));
+app.use(App.static(path.join(__dirname, '../../public')));
 
 app.use('*', function(req, res){
-  //router.route.apply(this, arguments ); 
+    //router.route.apply(this, arguments ); 
+    var sysConfig = app.sysConfig || {};
     if(req.originalUrl === "/" ){
       res.render('index', {title:'MoonApi'});
     }else{

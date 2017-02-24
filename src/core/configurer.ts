@@ -1,4 +1,4 @@
-import file from "fs";
+import file = require("fs");
 
 class  ConfigRead{
     config : string

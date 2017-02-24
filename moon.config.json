@@ -1,0 +1,7 @@
+{
+    "moonspace" : "/moonspace",
+    "admin-port" : 8888,
+    "server-port" : 3000,
+    "admin-route" : "",
+    "server-route" : ""
+}

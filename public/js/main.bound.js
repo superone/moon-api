@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e285167b6039d103b8c7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "17b24d35e1181ad87121"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9774,7 +9774,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9788,7 +9788,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -10957,6 +10957,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = {
@@ -10965,12 +10968,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data () {
         return {
-            msg: 'Hello World!'
+            msg: 'Hello World!',
+            currentView : "routeTree"
         }
     },
     methods : {
         message( e ){
             console.log(e);
+        },
+        changeView ( view ){
+            this.currentView = view;
         }
     }
 };
@@ -11219,46 +11226,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data () {
         return {
-            treeData : [
-                {
-                    "nodeId" : "111",
-                    "menuName" : "/(root)",
-                    "route" : "/",
-                    "routeType" : "view:html",
-                    "requestType" : "get",
-                    "child" : [
-                        {
-                            "nodeId" : "111",
-                            "menuName" : "用户中心",
-                            "route" : "/user",
-                            "routeType" : "view:html",
-                            "requestType" : "get",
-                            "child" : [
-                                {
-                                    "nodeId" : "111",
-                                    "menuName" : "获取用户信息",
-                                    "route" : "/userinfo",
-                                    "routeType" : "restFull:get",
-                                    "requestType" : "get",
-                                    "child" :[
-
-                                    ]
-                                },
-                                {
-                                    "nodeId" : "111",
-                                    "menuName" : "更新用户信息",
-                                    "route" : "/userinfo",
-                                    "routeType" : "restFull:post",
-                                    "requestType" : "post",
-                                    "child" :[
-                                        
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            treeData : []
+        }
+    },
+    mounted : function(){
+        this.loadData();
+    },
+    methods : {
+        loadData : function(){
+            var me = this;
+            $.get("/tree.json" , function( data ){
+                me.treeData = data;
+            });
         }
     }
 };
@@ -11376,9 +11355,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "code-edit code-left"
-  }, [_c('div', {
+  }, [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.changeView('other')
+      }
+    }
+  }, [_vm._v("other")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.changeView('routeTree')
+      }
+    }
+  }, [_vm._v("tree")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.changeView('white')
+      }
+    }
+  }, [_vm._v("white")]), _vm._v(" "), _c('div', {
     staticClass: "cont"
-  }, [_c('route-tree')], 1), _vm._v(" "), _c('div', {
+  }, [_c(_vm.currentView, {
+    tag: "component"
+  })], 1), _vm._v(" "), _c('div', {
     staticClass: "cont edit"
   })])
 },staticRenderFns: []}

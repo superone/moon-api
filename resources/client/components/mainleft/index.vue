@@ -1,7 +1,7 @@
 <template>
     <div class="code-edit code-left">
         <div class="cont">
-            <route-tree></route-tree>
+            <component :is="currentView"></component>
         </div>
         <div class="cont edit">
 
@@ -10,19 +10,25 @@
 </template>
 
 <script>
-    import routeTree from "../routetree"
+    import routeTree from "./routetree"
+    import assetTree from "./assettree"
     export default {
         components:{
-            routeTree
+            routeTree,
+            assetTree
         },
         data () {
             return {
-                msg: 'Hello World!'
+                msg: 'Hello World!',
+                currentView : "routeTree"
             }
         },
         methods : {
             message( e ){
                 console.log(e);
+            },
+            changeView ( view ){
+                this.currentView = view;
             }
         }
     }

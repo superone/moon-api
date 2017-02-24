@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var router_1 = require("../core/router");
 var app = express();
 app.locals.mode = "server";
-var router = new router_1.Router(app);
+var router = new router_1.default(app);
 // view engine setup
 app.set('views', path.join(__dirname, '../../resources/views'));
 app.set('view engine', 'jade');
