@@ -2,10 +2,10 @@ extends layout
 
 block heaer
   link(rel='stylesheet', href='/css/index.css')
+  script(src="/lib/vue.js")
   script(src="/lib/zepto.min.js")
 
 block content
-  <div id="page-app">
-  </div>
+  <app></app>
 block script
   script(src="/js/main.bound.js")

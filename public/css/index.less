@@ -11,165 +11,167 @@ a{
 li{
     list-style:none; 
 }
-body{
-    .page-header{
+
+.page-header{
+    position:relative;
+    height:50px;
+    background:#1f2c36;
+    border-bottom:1px solid #101219;
+    .page-logo{
         position:relative;
-        height:50px;
-        background:#373d51;
-        border-bottom:1px solid #101219;
-        .page-logo{
-            position:relative;
-            top:7px;
-            left:8px;
-            height:37px;
-        }
+        top:7px;
+        left:8px;
+        height:37px;
     }
-    .page-main{
-        position:fixed;
-        top:51px;
-        bottom:26px;
-        left:50px;
+}
+.page-main{
+    position:fixed;
+    top:51px;
+    bottom:26px;
+    left:50px;
+    width:100%;
+    background: #423a3a;
+    color:#fff;
+    .code-edit{
+        position:relative;
+        box-sizing: border-box;
+        height:100%;
+        background:#252526;
+    }
+    .code-edit > div.cont{
+        position: relative;
+        box-sizing: border-box;
         width:100%;
-        background: #423a3a;
-        color:#fff;
-        .code-edit{
-            position:relative;
-            box-sizing: border-box;
+        height:100%;
+        position: relative;
+        background: #000000;
+    }
+    .code-edit > div.edit{
+    }
+    .code-left{
+        width:320px;
+        //min-width:300px;
+        float:left;
+        .tree{
             height:100%;
-            background:#252526;
-        }
-        .code-edit > div.cont{
-            position: relative;
-            box-sizing: border-box;
             width:100%;
-            height:100%;
-            position: relative;
-            background: #000000;
-        }
-        .code-edit > div.edit{
-        }
-        .code-left{
-            width:320px;
-            min-width:300px;
-            float:left;
-            .tree{
-                height:100%;
-                width:100%;
-                .tree-title{
-                    line-height:30px;
-                    padding:0 10px;
-                    background:#3a0d0d;
-                }
-                .tree-cont{
-                    position: absolute;
-                    top:30px;
-                    bottom:0px;
-                    right:0px;
-                    left:0px;
-                    overflow-y:auto;
-                    //padding:5px;
-                    box-sizing: border-box;
-                    font-size:13px;
-                    .tree-node{
-                        position: relative;
-                        line-height:25px;
-                        overflow:hidden;
-                        .node-icon{
+            .tree-title{
+                line-height:30px;
+                padding:0 10px;
+                background:#2e2d2d;
+                border: 1px solid #1a2630;
+                color: #758d9f;
+                font-size: 14px;
+            }
+            .tree-cont{
+                position: absolute;
+                top:30px;
+                bottom:0px;
+                right:0px;
+                left:0px;
+                overflow-y:auto;
+                //padding:5px;
+                box-sizing: border-box;
+                font-size:13px;
+                .tree-node{
+                    position: relative;
+                    line-height:25px;
+                    overflow:hidden;
+                    .node-icon{
+                        position:relative;
+                        top:-2px;
+                        display:inline-block;
+                        width:12px;height:12px;
+                        background:url(../images/jia.png)no-repeat;
+                        background-size:12px 12px;
+                        vertical-align: middle;
+                    }
+                    .jian{
+                        background:url(../images/jian.png)no-repeat;
+                        background-size:12px 12px;
+                    }
+                    > ul > li{
+                        position:relative;
+                            > .tree-node{
+                            margin-left:22px;
+                        }
+                        span{
                             position:relative;
-                            top:-2px;
+                            padding-left:5px;
                             display:inline-block;
-                            width:12px;height:12px;
-                            background:url(../images/jia.png)no-repeat;
-                            background-size:12px 12px;
-                            vertical-align: middle;
-                        }
-                        .jian{
-                            background:url(../images/jian.png)no-repeat;
-                            background-size:12px 12px;
-                        }
-                        > ul > li{
-                            position:relative;
-                             > .tree-node{
-                                margin-left:22px;
-                            }
-                            span{
-                                position:relative;
-                                padding-left:5px;
-                                display:inline-block;
-                                width:100%;
-                                height:25px;
-                                .node-pre-line{
-                                    position:absolute;
-                                    top:12px;
-                                    left:-12px;
-                                    height:1px;
-                                    border-top:1px dashed #423a3a;
-                                    width:10px;                                    
-                                }
+                            width:100%;
+                            height:25px;
+                            .node-pre-line{
+                                position:absolute;
+                                top:12px;
+                                left:-12px;
+                                height:1px;
+                                border-top:1px dashed #423a3a;
+                                width:10px;                                    
                             }
                         }
-                        > ul > li >span.checked{
-                            background:#161616;
-                        }
-                        > ul > li >span:hover{
-                            background:#121111;
-                        }
-                        > .tree-line{
-                            width:12px;
-                            position: absolute;
-                            top:26px;
-                            left:12px;
-                            bottom:12px;
-                            border-left:1px dashed #777777;
-                            border-bottom:1px dashed #777777;
-                        }
+                    }
+                    > ul > li >span.checked{
+                        background:#161616;
+                    }
+                    > ul > li >span:hover{
+                        background:#121111;
+                    }
+                    > .tree-line{
+                        width:12px;
+                        position: absolute;
+                        top:26px;
+                        left:12px;
+                        bottom:12px;
+                        border-left:1px dashed #777777;
+                        border-bottom:1px dashed #777777;
                     }
                 }
             }
         }
-        .code-right{
-            //position: absolute;
-            padding: 0 0 0 3px;
-            top:0px;
-            overflow:hidden;
-        }
     }
+    .code-right{
+        //position: absolute;
+        padding: 0 0 0 3px;
+        top:0px;
+        overflow:hidden;
+    }
+}
 
-    .left-bar{
-        position:fixed;
-        left:0px;
-        top:51px;
-        width:50px;
-        height:100%;
-        background:#333333;
-        li{
-            text-align:center;
-            a{
-                display:block;
-                width:100%;
-                height:100%;
-                padding:10px 0;
-            }
+.left-bar{
+    position:fixed;
+    left:0px;
+    top:51px;
+    width:50px;
+    height:100%;
+    background:#1b2832;
+    li{
+        text-align:center;
+        a{
+            display:block;
+            width:100%;
+            height:100%;
+            padding:10px 0;
         }
-        li.top-btn{
-            a{
-                padding:5px 0;
-            }
-        }
-        li.active{
-            background:#111111;
-        }
-        li:not(.active):hover{
-            background:#370f0f;
-        }
-        
     }
-    .page-footer{
-        position:fixed;
-        bottom:0px;
-        width:100%;
-        height:25px;
-        background: rgba(176, 176, 176, 0.98);
-        border-top: 1px solid #2b2b2b;
+    li.top-btn{
+        a{
+            padding:5px 0;
+        }
     }
+    li.active{
+        background:#111111;
+    }
+    li:not(.active):hover{
+        background:#370f0f;
+    }
+    
+}
+.page-footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    height:25px;
+    background: rgba(176, 176, 176, 0.98);
+    border-top: 1px solid #2b2b2b;
 }

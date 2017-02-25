@@ -1,18 +1,18 @@
 <template>
-<div>
-    <div class="container">
-        <page-header></page-header>
-    </div>
-    <div class="container">
-        <div class="main-content">
-            <page-main class="page-main"></page-main>
+    <div id="main">
+        <div class="container">
+            <page-header></page-header>
         </div>
-        <left-bar></left-bar>
+        <div class="container">
+            <div class="main-content">
+                <page-main class="page-main"></page-main>
+            </div>
+            <left-bar></left-bar>
+        </div>
+        <div class="container">
+            <page-footer></page-footer>
+        </div>
     </div>
-    <div class="container">
-        <page-footer></page-footer>
-    </div>
-</div>
 </template>
 
 <script>
