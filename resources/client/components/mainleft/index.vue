@@ -1,8 +1,7 @@
 <template>
-    <div class="code-edit code-left" :class="[open?'open':'close']">
-    <a href="javascript:;" @click="alerttxt">tage</a>
+    <div class="code-edit code-left" :class="[getMenuToggle?'open':'close']">
         <div class="cont">
-            <component :is="currentView"></component>
+            <component :is="getCurrentMenu"></component>
         </div>
         <div class="cont edit">
 
@@ -13,14 +12,8 @@
 <script>
     import routeTree from "./coms/routetree"
     import assetTree from "./coms/assettree"
-    import actions from "../../vuex/home/actions"
-    import Vuex from 'vuex'
-    export default {
-        vuex: {
-            actions: {
-                alerttxt: actions.alerttxt
-            }
-        },
+
+    export default Vue.extend({
         components:{
             routeTree,
             assetTree
@@ -28,12 +21,15 @@
         data () {
             return {
                 msg: 'Hello World!',
-                currentView : "routeTree",
                 open : true
             }
-        }
+        },
+        computed : Vuex.mapGetters([
+            'getCurrentMenu',
+            'getMenuToggle'
+        ])
         
-    }
+    })
 </script>
 
 <style>

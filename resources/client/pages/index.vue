@@ -21,7 +21,7 @@
     import pageMain from "../components/pagemain/index.vue"
     import leftBar from "../components/leftbar/index.vue"
 
-    export default {
+    export default Vue.extend({
         components :{
             pageHeader,
             pageMain,
@@ -33,7 +33,7 @@
                 msg: 'Hello World!'
             }
         }
-    }
+    })
 </script>
 
 <style>

@@ -4,13 +4,13 @@
 </template>
 
 <script>
-    export default {
+    export default Vue.extend({
         data () {
             return {
                 msg: 'Hello World!'
             }
         }
-    }
+    })
 </script>
 
 <style>

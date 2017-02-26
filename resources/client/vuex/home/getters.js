@@ -1,6 +1,9 @@
 const getters = {
-  alertTow (state) {
-      alert("tow");
+  getCurrentMenu(state){
+    return state.currentView;
+  },
+  getMenuToggle(state){
+      return state.menuToggle
   }
 }
 

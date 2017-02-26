@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    export default {
+    export default Vue.extend({
         name : "items",
         props: ['treeData'],
         components: {},
@@ -42,7 +42,7 @@
                 }
             }
         }
-    }
+    })
 </script>
 
 <style>

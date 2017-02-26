@@ -165,7 +165,7 @@
 
 <script>
     import treeNode from "./items.vue"
-    export default {
+    export default Vue.extend({
         components:{
             treeNode
         },
@@ -185,7 +185,7 @@
                 });
             }
         }
-    }
+    })
 </script>
 
 <style>

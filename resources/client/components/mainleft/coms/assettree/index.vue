@@ -1,6 +1,6 @@
 <template>
     <div class='tree'>
-        <div class='tree-title'>路由列表</div>
+        <div class='tree-title'>资源列表</div>
         <div class='tree-cont'>
             <tree-node v-for="item in treeData" v-bind:tree-data="item"></tree-node>
             <!--<div class="tree-node">
@@ -165,7 +165,7 @@
 
 <script>
     import treeNode from "./items.vue"
-    export default {
+    export default Vue.extend({
         components:{
             treeNode
         },
@@ -185,7 +185,7 @@
                 });
             }
         }
-    }
+    })
 </script>
 
 <style>

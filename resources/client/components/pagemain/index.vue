@@ -8,7 +8,7 @@
 <script>
     import mainLeft from "../mainleft/index.vue"
     import mainRight from "../mainright/index.vue"
-    export default {
+    export default Vue.extend({
         components:{
             mainLeft,
             mainRight
@@ -18,7 +18,7 @@
                 msg: 'Hello World!'
             }
         }
-    }
+    })
 </script>
 
 <style>

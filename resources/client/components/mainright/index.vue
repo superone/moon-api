@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    export default {
+    export default Vue.extend({
         data () {
             return {
                 msg: 'Hello World!'
@@ -18,7 +18,7 @@
                 console.log(e);
             }
         }
-    }
+    })
 </script>
 
 <style>
