@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "eaa2fd36dab50c113d50"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "afd70d9b9e9ca38911eb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9788,7 +9788,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -10955,6 +10955,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
     name : "items",
@@ -11020,6 +11021,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 "value" : this.treeData.route + val.value
             }
             this.$emit("on-add-route",val);
+        },
+        canelAdd(){
+            this.localInputting = false;
         },
         addInputBlur( e ){
             var me = this;
@@ -11609,7 +11613,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.addInputBlur($event)
       }
     }
-  })])], 2)]), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('a', {
+    staticClass: "cancel-input",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": _vm.canelAdd
+    }
+  }, [_vm._v("X")])])], 2)]), _vm._v(" "), _c('div', {
     staticClass: "tree-line"
   })])
 },staticRenderFns: []}

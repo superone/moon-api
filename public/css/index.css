@@ -163,10 +163,19 @@ li {
   border-bottom: 1px dashed #777777;
 }
 .page-main .code-left .tree .tree-cont .tree-node .new-input {
-  display: block;
+  display: inline-block;
   border: 1px solid #53e91e;
   margin-left: 5px;
   font-size: 14px;
+}
+.page-main .code-left .tree .tree-cont .tree-node .cancel-input {
+  position: relative;
+  /* right: -15px; */
+  width: 16px;
+  height: 23px;
+  /* display: inline-block; */
+  top: 0px;
+  background: #1b1b1b;
 }
 .page-main .code-left .card-bar {
   position: absolute;

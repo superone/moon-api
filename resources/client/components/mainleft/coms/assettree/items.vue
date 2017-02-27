@@ -21,6 +21,7 @@
                 </items>
                 <div class="tree-node" :class="{hide:!isInputting}">
                     <input class='new-input' @blur="addInputBlur($event)" type="text"/>
+                    <a class="cancel-input" @click="canelAdd" href="javascript:;">X</a>
                 </div>
             </li>
         </ul>
@@ -94,6 +95,9 @@
                 }
                 this.$emit("on-add-route",val);
             },
+            canelAdd(){
+                this.localInputting = false;
+            },
             addInputBlur( e ){
                 var me = this;
                 var el = e.target;
@@ -102,14 +106,6 @@
                 this.$emit("on-add-route",{
                     "value" : value
                 });
-
-                // if(value){
-                //     $.get("/tree.json", {
-                //         "value" : value
-                //     } , function( data ){
-                //         me.$emit("on-update-tree-data",data);
-                //     });
-                // }
                 this.localInputting = false;
             }
         }
