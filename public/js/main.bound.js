@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b31230b5e09979cfd75d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0888260a680d907b1d95"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9774,7 +9774,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\ndiv.code-left.close{\n    width:0px;\n}\n", ""]);
+exports.push([module.i, "\ndiv.code-left.close{\n    display:none;\n}\n", ""]);
 
 // exports
 
@@ -9788,7 +9788,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9816,7 +9816,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9844,7 +9844,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9858,7 +9858,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -11019,7 +11019,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data () {
         return {
-            treeData : []
+            treeData : [],
+            activeNode : ''
         }
     },
     mounted : function(){
@@ -11027,10 +11028,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     methods : {
         loadData : function(){
-            var me = this;
+            let me = this;
             $.get("/tree.json" , function( data ){
                 me.treeData = data;
             });
+        },
+        onActiveChange( val ){
+            this.activeNode = val;
         }
     }
 });
@@ -11064,26 +11068,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
     name : "items",
-    props: ['treeData'],
+    props: ['treeData' , 'activeNode'],
     components: {},
     data() {
         return {
             open: false,
-            nodeStyle : "height:25px;"
+            nodeStyle : "height:25px;",
+            localActiveNode : this.activeNode
         }
     },
     computed :{
         isFolder(){
             return this.treeData.child && this.treeData.child.length
+        },
+        isActive(){
+            return  this.treeData.nodeId == this.localActiveNode;
+        }
+    },
+    watch: {
+        activeNode(val) {
+            this.localActiveNode = val;
+        },
+        localActiveNode(val){
+            this.$emit("on-active-change",val);
         }
     },
     methods: {
         toggle() {
-            console.log(this);
             if( this.isFolder ) {
                 this.open = !this.open
                 this.nodeStyle = this.open ? "height:auto" : "height:25px"
             }
+        },
+        selectNode(node){
+            this.localActiveNode = node.nodeId;
+        },
+        onActiveChange( val ){
+            this.localActiveNode = val;
+            //this.$emit("on-active-change",val);
         }
     }
 });
@@ -11270,7 +11292,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data () {
         return {
-            treeData : []
+            treeData : [],
+            activeNode : ''
         }
     },
     mounted : function(){
@@ -11278,10 +11301,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     methods : {
         loadData : function(){
-            var me = this;
+            let me = this;
             $.get("/tree.json" , function( data ){
                 me.treeData = data;
             });
+        },
+        onActiveChange( val ){
+            this.activeNode = val;
         }
     }
 });
@@ -11312,29 +11338,49 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
     name : "items",
-    props: ['treeData'],
+    props: ['treeData' , 'activeNode'],
     components: {},
     data() {
         return {
             open: false,
-            nodeStyle : "height:25px;"
+            nodeStyle : "height:25px;",
+            localActiveNode : this.activeNode
         }
     },
     computed :{
         isFolder(){
             return this.treeData.child && this.treeData.child.length
+        },
+        isActive(){
+            return  this.treeData.nodeId == this.localActiveNode;
+        }
+    },
+    watch: {
+        activeNode(val) {
+            this.localActiveNode = val;
+        },
+        localActiveNode(val){
+            this.$emit("on-active-change",val);
         }
     },
     methods: {
         toggle() {
-            console.log(this);
             if( this.isFolder ) {
                 this.open = !this.open
                 this.nodeStyle = this.open ? "height:auto" : "height:25px"
             }
+        },
+        selectNode(node){
+            this.localActiveNode = node.nodeId;
+        },
+        onActiveChange( val ){
+            this.localActiveNode = val;
+            //this.$emit("on-active-change",val);
         }
     }
 });
@@ -11360,7 +11406,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -11373,13 +11418,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data () {
         return {
             msg: 'Hello World!',
-            open : true
+            open : true,
+            panelWidth : 300,
+            startPanelWidth : 300,
+            cardBarPageX : 0,
+            lastPageX : 0
         }
     },
-    computed : Vuex.mapGetters([
-        'getCurrentMenu',
-        'getMenuToggle'
-    ])
+    computed : {
+        getCurrentMenu : function(){
+            return this.$store.getters.getCurrentMenu
+        },
+        getMenuToggle : function(){
+            return this.$store.getters.getMenuToggle
+        },
+        getPanleStyle(){
+            return "width:"+this.panelWidth + "px;";
+        }
+    },
+    methods : {
+        panleDrag(e){
+            var type = e.type;
+            var pageX = e.pageX;
+            var cha = 0;
+            if( type === "dragstart"){
+                //console.log("start");
+                this.cardBarPageX = pageX;
+                this.lastPageX = pageX;
+            }else if( type === "drag"){
+                //console.log(this.cardBarPageX + "/" + pageX + "|" + (this.panelWidth) + "/" + (this.lastPageX - pageX));
+                if( this.lastPageX != pageX && pageX > 0){
+                    this.panelWidth = this.panelWidth - (this.lastPageX - pageX);
+                }
+                this.lastPageX = pageX;
+            }else if( type === "dragend"){
+                //console.log("end");
+                this.cardBarPageX = 0;                    
+                this.lastPageX = 0;
+            }
+        }
+    }
     
 });
 
@@ -11505,13 +11583,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "code-edit code-left",
-    class: [_vm.getMenuToggle ? 'open' : 'close']
+    class: [_vm.getMenuToggle ? 'open' : 'close'],
+    style: (_vm.getPanleStyle)
   }, [_c('div', {
     staticClass: "cont"
   }, [_c(_vm.getCurrentMenu, {
     tag: "component"
-  })], 1), _vm._v(" "), _c('div', {
-    staticClass: "cont edit"
+  })], 1), _vm._v(" "), _c('a', {
+    staticClass: "card-bar",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "dragstart": function($event) {
+        _vm.panleDrag($event)
+      },
+      "drag": function($event) {
+        _vm.panleDrag($event)
+      },
+      "dragend": function($event) {
+        _vm.panleDrag($event)
+      }
+    }
   })])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -11531,7 +11624,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     ref: "root",
     staticClass: "tree-node",
     style: (_vm.nodeStyle)
-  }, [_c('ul', [_c('li', [_c('span', {}, [_c('a', {
+  }, [_c('ul', [_c('li', [_c('span', {
+    class: {
+      active: _vm.localActiveNode == _vm.treeData.nodeId
+    }
+  }, [_c('a', {
     staticClass: "node-icon",
     class: [_vm.open ? 'jian' : ''],
     attrs: {
@@ -11544,11 +11641,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "node-name",
     attrs: {
       "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        $event.stopPropagation();
+        _vm.selectNode(_vm.treeData)
+      }
     }
   }, [_vm._v(_vm._s(_vm.treeData.menuName))])]), _vm._v(" "), _vm._l((_vm.treeData.child), function(item) {
     return _c('items', {
       attrs: {
-        "tree-data": item
+        "tree-data": item,
+        "active-node": _vm.activeNode
+      },
+      on: {
+        "on-active-change": _vm.onActiveChange
       }
     })
   })], 2)]), _vm._v(" "), _c('div', {
@@ -11589,7 +11696,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     ref: "root",
     staticClass: "tree-node",
     style: (_vm.nodeStyle)
-  }, [_c('ul', [_c('li', [_c('span', {}, [_c('a', {
+  }, [_c('ul', [_c('li', [_c('span', {
+    class: {
+      active: _vm.localActiveNode == _vm.treeData.nodeId
+    }
+  }, [_c('a', {
     staticClass: "node-icon",
     class: [_vm.open ? 'jian' : ''],
     attrs: {
@@ -11602,11 +11713,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "node-name",
     attrs: {
       "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        $event.stopPropagation();
+        _vm.selectNode(_vm.treeData)
+      }
     }
-  }, [_vm._v(_vm._s(_vm.treeData.menuName))])]), _vm._v(" "), _vm._l((_vm.treeData.child), function(item) {
+  }, [_c('ins', [_vm._v("[" + _vm._s(_vm.treeData.requestType) + "]")]), _vm._v(_vm._s(_vm.treeData.route)), _c('i', [_vm._v("(" + _vm._s(_vm.treeData.menuName) + ")")])])]), _vm._v(" "), _vm._l((_vm.treeData.child), function(item) {
     return _c('items', {
       attrs: {
-        "tree-data": item
+        "tree-data": item,
+        "active-node": _vm.activeNode
+      },
+      on: {
+        "on-active-change": _vm.onActiveChange
       }
     })
   })], 2)]), _vm._v(" "), _c('div', {
@@ -11674,7 +11795,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, _vm._l((_vm.treeData), function(item) {
     return _c('tree-node', {
       attrs: {
-        "tree-data": item
+        "tree-data": item,
+        "active-node": _vm.activeNode
+      },
+      on: {
+        "on-active-change": _vm.onActiveChange
       }
     })
   }))])
@@ -11701,7 +11826,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, _vm._l((_vm.treeData), function(item) {
     return _c('tree-node', {
       attrs: {
-        "tree-data": item
+        "tree-data": item,
+        "active-node": _vm.activeNode
+      },
+      on: {
+        "on-active-change": _vm.onActiveChange
       }
     })
   }))])

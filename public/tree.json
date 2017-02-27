@@ -1,20 +1,20 @@
 [
                     {
-                        "nodeId" : "111",
+                        "nodeId" : 1,
                         "menuName" : "/(root)",
                         "route" : "/",
                         "routeType" : "view:html",
                         "requestType" : "get",
                         "child" : [
                             {
-                                "nodeId" : "111",
+                                "nodeId" : 2,
                                 "menuName" : "用户中心",
                                 "route" : "/user",
                                 "routeType" : "view:html",
                                 "requestType" : "get",
                                 "child" : [
                                     {
-                                        "nodeId" : "111",
+                                        "nodeId" : 3,
                                         "menuName" : "获取用户信息",
                                         "route" : "/userinfo",
                                         "routeType" : "restFull:get",
@@ -24,7 +24,7 @@
                                         ]
                                     },
                                     {
-                                        "nodeId" : "111",
+                                        "nodeId" : 4,
                                         "menuName" : "更新用户信息",
                                         "route" : "/userinfo",
                                         "routeType" : "restFull:post",
@@ -34,6 +34,22 @@
                                         ]
                                     }
                                 ]
+                            },
+                            {
+                                "nodeId" : 21,
+                                "menuName" : "支付接口",
+                                "route" : "/pay",
+                                "routeType" : "view:html",
+                                "requestType" : "get",
+                                "child" : []
+                            },
+                            {
+                                "nodeId" : 22,
+                                "menuName" : "搜索接口",
+                                "route" : "/search",
+                                "routeType" : "view:html",
+                                "requestType" : "get",
+                                "child" : []
                             }
                         ]
                     }

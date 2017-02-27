@@ -2,7 +2,7 @@
     <div class='tree'>
         <div class='tree-title'>资源列表</div>
         <div class='tree-cont'>
-            <tree-node v-for="item in treeData" v-bind:tree-data="item"></tree-node>
+            <tree-node v-for="item in treeData" @on-active-change="onActiveChange"  v-bind:tree-data="item" v-bind:active-node="activeNode"></tree-node>
             <!--<div class="tree-node">
                 <ul>
                     <li>
@@ -171,7 +171,8 @@
         },
         data () {
             return {
-                treeData : []
+                treeData : [],
+                activeNode : ''
             }
         },
         mounted : function(){
@@ -179,10 +180,13 @@
         },
         methods : {
             loadData : function(){
-                var me = this;
+                let me = this;
                 $.get("/tree.json" , function( data ){
                     me.treeData = data;
                 });
+            },
+            onActiveChange( val ){
+                this.activeNode = val;
             }
         }
     })
