@@ -4,13 +4,24 @@
             <li>
                 <span :class="{active : localActiveNode == treeData.nodeId }">
                     <a class="node-icon" 
-                        :class="[open?'jian':'']" 
-                        href="javascript:;" 
-                        @click='toggle'>
+                       :class="[open?'jian':'']" 
+                       href="javascript:;" 
+                       @click='toggle'>
                     </a>
                     <a class='node-name' @click.stop="selectNode(treeData)"  href='javascript:;'>{{ treeData.menuName }}</a>
                 </span>
-                <items v-for="item in treeData.child" @on-active-change="onActiveChange" :tree-data="item" :active-node="activeNode"></items>
+                <items v-for="item in treeData.child" 
+                       @on-active-change="onActiveChange" 
+                       @on-inputting-change="onInputtingChange"
+                       @on-update-tree-data = "onUpdateTreeData"
+                       @on-add-route="onAddRoute"
+                       :tree-data="item" 
+                       :active-node="activeNode" 
+                       :inputting="inputting">
+                </items>
+                <div class="tree-node" :class="{hide:!isInputting}">
+                    <input class='new-input' @blur="addInputBlur($event)" type="text"/>
+                </div>
             </li>
         </ul>
         <div class="tree-line"></div>
@@ -20,13 +31,14 @@
 <script>
     export default Vue.extend({
         name : "items",
-        props: ['treeData' , 'activeNode'],
+        props: ['treeData' , 'activeNode' , 'inputting'],
         components: {},
         data() {
             return {
                 open: false,
                 nodeStyle : "height:25px;",
-                localActiveNode : this.activeNode
+                localActiveNode : this.activeNode,
+                localInputting : this.inputting
             }
         },
         computed :{
@@ -35,6 +47,10 @@
             },
             isActive(){
                 return  this.treeData.nodeId == this.localActiveNode;
+            },
+            isInputting(){
+                console.log("isInput");
+                return (this.localActiveNode == this.treeData.nodeId && this.localInputting)
             }
         },
         watch: {
@@ -43,6 +59,12 @@
             },
             localActiveNode(val){
                 this.$emit("on-active-change",val);
+            },
+            inputting( val ){
+                this.localInputting = val;
+            },
+            localInputting( val ){
+                this.$emit("on-inputting-change" , val)
             }
         },
         methods: {
@@ -58,6 +80,37 @@
             onActiveChange( val ){
                 this.localActiveNode = val;
                 //this.$emit("on-active-change",val);
+            },
+            onInputtingChange( val ){
+                this.localInputting = val;
+                //this.$emit("on-active-change",val);
+            },
+            onUpdateTreeData( val ){
+                this.$emit("on-update-tree-data",val);
+            },
+            onAddRoute( val ){
+                val = {
+                    "value" : this.treeData.route + val.value
+                }
+                this.$emit("on-add-route",val);
+            },
+            addInputBlur( e ){
+                var me = this;
+                var el = e.target;
+                var value = $(el).val();
+                value = this.treeData.route + "/" + value;
+                this.$emit("on-add-route",{
+                    "value" : value
+                });
+
+                // if(value){
+                //     $.get("/tree.json", {
+                //         "value" : value
+                //     } , function( data ){
+                //         me.$emit("on-update-tree-data",data);
+                //     });
+                // }
+                this.localInputting = false;
             }
         }
     })

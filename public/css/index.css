@@ -12,6 +12,9 @@ a {
 li {
   list-style: none;
 }
+.hide {
+  display: none;
+}
 .page-header {
   position: relative;
   height: 50px;
@@ -60,6 +63,22 @@ li {
   border: 1px solid #381616;
   color: #b3b6b8;
   font-size: 14px;
+}
+.page-main .code-left .tree .tree-title ol {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.page-main .code-left .tree .tree-title ol li {
+  margin-right: 5px;
+}
+.page-main .code-left .tree .tree-title ol li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(/images/icon/route-add.png) no-repeat;
+  text-indent: -9999px;
+  background-position-y: center;
 }
 .page-main .code-left .tree .tree-cont {
   position: absolute;
@@ -142,6 +161,12 @@ li {
   bottom: 12px;
   border-left: 1px dashed #777777;
   border-bottom: 1px dashed #777777;
+}
+.page-main .code-left .tree .tree-cont .tree-node .new-input {
+  display: block;
+  border: 1px solid #53e91e;
+  margin-left: 5px;
+  font-size: 14px;
 }
 .page-main .code-left .card-bar {
   position: absolute;

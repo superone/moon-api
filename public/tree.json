@@ -20,7 +20,24 @@
                                         "routeType" : "restFull:get",
                                         "requestType" : "get",
                                         "child" :[
-
+                                                {
+                                                    "nodeId" : 31,
+                                                    "menuName" : "获取用户信息S",
+                                                    "route" : "/usersub",
+                                                    "routeType" : "restFull:get",
+                                                    "requestType" : "get",
+                                                    "child" :[
+                                                        {
+                                                            "nodeId" : 311,
+                                                            "menuName" : "获取用户信息SS",
+                                                            "route" : "/usersubS",
+                                                            "routeType" : "restFull:get",
+                                                            "requestType" : "get",
+                                                            "child" :[
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
                                         ]
                                     },
                                     {

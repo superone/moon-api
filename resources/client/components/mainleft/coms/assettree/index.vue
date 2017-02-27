@@ -1,164 +1,21 @@
 <template>
     <div class='tree'>
-        <div class='tree-title'>资源列表</div>
+        <div class='tree-title'>
+            <span>资源列表</span>
+            <ol :class="{hide:!hasActive}">
+                <li><a href="javascript:;" @click="addCase" class='tree-add-btn'>添加</a></li>
+            </ol>
+        </div>
         <div class='tree-cont'>
-            <tree-node v-for="item in treeData" @on-active-change="onActiveChange"  v-bind:tree-data="item" v-bind:active-node="activeNode"></tree-node>
-            <!--<div class="tree-node">
-                <ul>
-                    <li>
-                        <span class="checked">
-                            <a class="node-icon jian" href="javascript:;"></a>
-                            <a class='node-name' href='javascript:;'>/(root)</a>
-                        </span>
-                        <div class="tree-node">
-                            <ul>
-                                <li>
-                                    <span>
-                                        <a class="node-icon jian" href="javascript:;"></a>
-                                        <a class='node-name' href='javascript:;'>获取用户信息api1</a>
-                                        <span class="node-pre-line"></span>
-                                    </span>
-                                    <div class="tree-node">
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <a class="node-icon jian" href="javascript:;"></a>
-                                                    <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                </span>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                    <div class="tree-node">
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <a class="node-icon jian" href="javascript:;"></a>
-                                                    <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                </span>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="tree-line"></div>
-                                    </div>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="tree-line"></div>
-                                    </div>
-                                    <div class="tree-node">
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <a class="node-icon jian" href="javascript:;"></a>
-                                                    <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                </span>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                                <div class="tree-node">
-                                                    <ul>
-                                                        <li>
-                                                            <span>
-                                                                <a class="node-icon" href="javascript:;"></a>
-                                                                <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                    <div class="tree-line"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="tree-line"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="tree-line"></div>
-                        </div>
-
-                        <div class="tree-node">
-                            <ul>
-                                <li>
-                                    <span>
-                                        <a class="node-icon jian" href="javascript:;"></a>
-                                        <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                    </span>
-                                    <div class="tree-node" >
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <a class="node-icon" href="javascript:;"></a>
-                                                    <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                        <div class="tree-line"></div>
-                                    </div>
-                                    <div class="tree-node">
-                                        <ul>
-                                            <li>
-                                                <span>
-                                                    <a class="node-icon" href="javascript:;"></a>
-                                                    <a class='node-name' href='javascript:;'>获取用户信息api</a>
-                                                </span>
-                                            </li>
-                                        </ul>
-                                        <div class="tree-line"></div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="tree-line"></div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="tree-line"></div>
-            </div>-->
+            <tree-node v-for="item in treeData" 
+                       @on-active-change="onActiveChange"  
+                       @on-inputting-change="onInputtingChange"  
+                       @on-update-tree-data = "onUpdateTreeData"
+                       @on-add-route="onAddRoute"
+                       v-bind:tree-data="item" 
+                       v-bind:active-node="activeNode" 
+                       v-bind:inputting="inputting">
+            </tree-node>
         </div>
     </div>
 </template>
@@ -172,7 +29,9 @@
         data () {
             return {
                 treeData : [],
-                activeNode : ''
+                activeNode : '',
+                hasActive : false,
+                inputting : false
             }
         },
         mounted : function(){
@@ -187,6 +46,26 @@
             },
             onActiveChange( val ){
                 this.activeNode = val;
+                this.hasActive = !!val;
+            },
+            onInputtingChange( val ){
+                this.inputting = val;
+            },
+            onUpdateTreeData( val ){
+                this.treeData = val;
+            },
+            onAddRoute( val ){
+                var me = this;
+                if( val ){
+                    val.value = val.value.replace(/\/+/g,"/");
+                    $.get("/tree.json", val , function( data ){
+                        me.treeData = data;
+                    });
+                }
+            },
+            addCase(){
+                //if(!this.hasActive) return;
+                this.inputting = true;
             }
         }
     })

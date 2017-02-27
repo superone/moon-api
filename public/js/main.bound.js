@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0888260a680d907b1d95"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "eaa2fd36dab50c113d50"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9788,7 +9788,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9844,7 +9844,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -10868,149 +10868,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
@@ -11020,7 +10877,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data () {
         return {
             treeData : [],
-            activeNode : ''
+            activeNode : '',
+            hasActive : false,
+            inputting : false
         }
     },
     mounted : function(){
@@ -11035,6 +10894,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         onActiveChange( val ){
             this.activeNode = val;
+            this.hasActive = !!val;
+        },
+        onInputtingChange( val ){
+            this.inputting = val;
+        },
+        onUpdateTreeData( val ){
+            this.treeData = val;
+        },
+        onAddRoute( val ){
+            var me = this;
+            if( val ){
+                val.value = val.value.replace(/\/+/g,"/");
+                $.get("/tree.json", val , function( data ){
+                    me.treeData = data;
+                });
+            }
+        },
+        addCase(){
+            //if(!this.hasActive) return;
+            this.inputting = true;
         }
     }
 });
@@ -11065,16 +10944,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
     name : "items",
-    props: ['treeData' , 'activeNode'],
+    props: ['treeData' , 'activeNode' , 'inputting'],
     components: {},
     data() {
         return {
             open: false,
             nodeStyle : "height:25px;",
-            localActiveNode : this.activeNode
+            localActiveNode : this.activeNode,
+            localInputting : this.inputting
         }
     },
     computed :{
@@ -11083,6 +10974,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         isActive(){
             return  this.treeData.nodeId == this.localActiveNode;
+        },
+        isInputting(){
+            console.log("isInput");
+            return (this.localActiveNode == this.treeData.nodeId && this.localInputting)
         }
     },
     watch: {
@@ -11091,6 +10986,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         localActiveNode(val){
             this.$emit("on-active-change",val);
+        },
+        inputting( val ){
+            this.localInputting = val;
+        },
+        localInputting( val ){
+            this.$emit("on-inputting-change" , val)
         }
     },
     methods: {
@@ -11106,6 +11007,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         onActiveChange( val ){
             this.localActiveNode = val;
             //this.$emit("on-active-change",val);
+        },
+        onInputtingChange( val ){
+            this.localInputting = val;
+            //this.$emit("on-active-change",val);
+        },
+        onUpdateTreeData( val ){
+            this.$emit("on-update-tree-data",val);
+        },
+        onAddRoute( val ){
+            val = {
+                "value" : this.treeData.route + val.value
+            }
+            this.$emit("on-add-route",val);
+        },
+        addInputBlur( e ){
+            var me = this;
+            var el = e.target;
+            var value = $(el).val();
+            value = this.treeData.route + "/" + value;
+            this.$emit("on-add-route",{
+                "value" : value
+            });
+
+            // if(value){
+            //     $.get("/tree.json", {
+            //         "value" : value
+            //     } , function( data ){
+            //         me.$emit("on-update-tree-data",data);
+            //     });
+            // }
+            this.localInputting = false;
         }
     }
 });
@@ -11652,13 +11584,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('items', {
       attrs: {
         "tree-data": item,
-        "active-node": _vm.activeNode
+        "active-node": _vm.activeNode,
+        "inputting": _vm.inputting
       },
       on: {
-        "on-active-change": _vm.onActiveChange
+        "on-active-change": _vm.onActiveChange,
+        "on-inputting-change": _vm.onInputtingChange,
+        "on-update-tree-data": _vm.onUpdateTreeData,
+        "on-add-route": _vm.onAddRoute
       }
     })
-  })], 2)]), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('div', {
+    staticClass: "tree-node",
+    class: {
+      hide: !_vm.isInputting
+    }
+  }, [_c('input', {
+    staticClass: "new-input",
+    attrs: {
+      "type": "text"
+    },
+    on: {
+      "blur": function($event) {
+        _vm.addInputBlur($event)
+      }
+    }
+  })])], 2)]), _vm._v(" "), _c('div', {
     staticClass: "tree-line"
   })])
 },staticRenderFns: []}
@@ -11790,16 +11741,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "tree"
   }, [_c('div', {
     staticClass: "tree-title"
-  }, [_vm._v("资源列表")]), _vm._v(" "), _c('div', {
+  }, [_c('span', [_vm._v("资源列表")]), _vm._v(" "), _c('ol', {
+    class: {
+      hide: !_vm.hasActive
+    }
+  }, [_c('li', [_c('a', {
+    staticClass: "tree-add-btn",
+    attrs: {
+      "href": "javascript:;"
+    },
+    on: {
+      "click": _vm.addCase
+    }
+  }, [_vm._v("添加")])])])]), _vm._v(" "), _c('div', {
     staticClass: "tree-cont"
   }, _vm._l((_vm.treeData), function(item) {
     return _c('tree-node', {
       attrs: {
         "tree-data": item,
-        "active-node": _vm.activeNode
+        "active-node": _vm.activeNode,
+        "inputting": _vm.inputting
       },
       on: {
-        "on-active-change": _vm.onActiveChange
+        "on-active-change": _vm.onActiveChange,
+        "on-inputting-change": _vm.onInputtingChange,
+        "on-update-tree-data": _vm.onUpdateTreeData,
+        "on-add-route": _vm.onAddRoute
       }
     })
   }))])
