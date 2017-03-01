@@ -1,15 +1,12 @@
-import express = require('express');
+import express from "../core/app"
 import path = require('path');
 import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
-import Router from "../core/router";
+//import Router from "../core/router";
 
-var app = express();
-app.locals.mode = "server";
-
-var router = new Router(app);
+var app = new express();
 // view engine setup
 app.set('views', path.join(__dirname, '../../resources/views'));
 app.set('view engine', 'jade');
@@ -23,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 
 app.use('*', function(req, res){
-  router.route.apply(this, arguments );
+  res.render("index",{title:"mmm"});
 });
 
 // catch 404 and forward to error handler

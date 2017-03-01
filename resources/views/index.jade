@@ -1,5 +1,8 @@
 extends layout
 
+block title
+  title = title
+
 block heaer
   link(rel='stylesheet', href='/css/index.css')
   script(src="/lib/vue.js")
@@ -7,6 +10,6 @@ block heaer
   script(src="/lib/zepto.min.js")
 
 block content
-  <div></div>
+  div(class='main')
 block script
   script(src="/js/main.bound.js")
