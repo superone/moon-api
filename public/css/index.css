@@ -23,7 +23,7 @@ li {
 }
 .page-header .page-logo {
   position: relative;
-  top: 7px;
+  top: 5px;
   left: 8px;
   height: 37px;
 }
@@ -206,6 +206,8 @@ li {
   width: 50px;
   height: 100%;
   background: #1b2832;
+  box-shadow: 2px 0px 3px #201e1e;
+  -moz-box-shadow: 2px 0px 3px #201e1e;
 }
 .left-bar li {
   text-align: center;

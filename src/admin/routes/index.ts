@@ -1,9 +1,13 @@
+import { IRequirementDescriptors, RequirementDescriptor } from 'tslint/lib/rules/completedDocsRule';
+import { NoUnusedExpressionWalker } from 'tslint/lib/rules/noUnusedExpressionRule';
 /// <reference path="../../_all.d.ts" />
 "use strict";
 import * as express from "express";
 import * as path from "path";
 import * as fs from "fs";
+import * as vm from "vm";
 import * as colors from "colors";
+import * as util from "util";
 
 namespace Route {
 
@@ -30,6 +34,7 @@ namespace Route {
 
       }
 
+      //路由总入口
       public default(req: express.Request, res: express.Response, next: express.NextFunction) {
           //render page
           let sysconfig : any = this.server.getConfig();
@@ -44,7 +49,7 @@ namespace Route {
               this.runRoute.apply(this, arguments);
           //}
       }
-
+      //路由执行
       private runRoute(req: express.Request, res: express.Response, next: express.NextFunction):void{
           
           let err :string = "";
@@ -54,11 +59,37 @@ namespace Route {
           let reqPath = path.join( this.routePath , route , method + ".js");
           let filecode : string;
 
-          if( fs.existsSync( reqPath )  ){
+          if( fs.existsSync( reqPath ) ){
               filecode = fs.readFileSync( reqPath , "utf-8");
+              //var routefn = require( reqPath );
+              var SYSTEM = this.server.getConfig();
+              //SYSTEM = util.inspect( SYSTEM );
+              SYSTEM.rootPath = process.cwd();
+              SYSTEM.ROUTEPATH = this.routePath;
 
-              var routefn = eval( filecode );
-              routefn.apply( this , arguments );
+              const sandbox = {
+                  require       :   require,
+                  exports       :   exports,
+                  ROOT          :   SYSTEM.ROUTEPATH,
+                  RES           :   res,
+                  REQ           :   req,
+                  RESPONSE  :   ""
+              }
+
+              //vm.runInThisContext( "(function(){" + filecode + "})")(require);
+
+              var script = new vm.createScript( filecode );
+              const context = new vm.createContext(sandbox);
+              script.runInContext(context);
+
+              if( typeof sandbox.RESPONSE  !== "string"){
+                  sandbox.RESPONSE = util.inspect( sandbox.RESPONSE );
+              }
+
+              res.end( sandbox.RESPONSE );
+              //var routefn = eval( filecode );
+
+              //routefn.apply( this , arguments );
           }
 
           if( !this.routePath ) {
@@ -67,13 +98,13 @@ namespace Route {
               return;
           }
 
-          res.end( req.url );
+          res.end("Response is None");
       }
-
+      //调入配置
       private loadConfig():boolean {
           return true;
       }
-
+      //解析reqest  输出整理后的请求信息
       private analyseReq( req : express.Request) : object{
           let re = {
               route : ""
