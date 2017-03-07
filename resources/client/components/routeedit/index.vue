@@ -1,17 +1,12 @@
 <template>
     <div class="code-edit code-right">
         <div class="cont">
-            <router-link to="/foo">Go to Foo</router-link>
-            <router-link to="/bar">Go to Bar</router-link>
 
-            <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
-
-
     export default Vue.extend({
         data () {
             return {

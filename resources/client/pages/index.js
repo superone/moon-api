@@ -3,8 +3,11 @@
  */
 import store from '../vuex/home/store'
 import App from './index.vue'
+import router from "./router"
+
 
 new Vue({
+  router,
   store,
   el : "div",
   //components:{App}

@@ -8,7 +8,9 @@
 <script>
     import mainLeft from "../mainleft/index.vue"
     import mainRight from "../mainright/index.vue"
-    export default Vue.extend({
+    
+    const pagemain = Vue.extend({
+        //router,
         components:{
             mainLeft,
             mainRight
@@ -19,6 +21,8 @@
             }
         }
     })
+
+    export default pagemain
 </script>
 
 <style>
