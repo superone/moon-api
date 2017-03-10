@@ -3,7 +3,11 @@
         <div class="cont">
             <component :is="getCurrentMenu"></component>
         </div>
-        <a class="card-bar" @dragstart="panleDrag($event)" @drag="panleDrag($event)" @dragend="panleDrag($event)" href="javascript:;">
+        <a class="card-bar" 
+            @dragstart="panleDrag($event)" 
+            @drag="panleDrag($event)" 
+            @dragend="panleDrag($event)" 
+            href="javascript:;">
         </a>
     </div>
 </template>
