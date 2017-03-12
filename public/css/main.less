@@ -1,0 +1,178 @@
+.page-main{
+    position:fixed;
+    z-index:20;
+    top:51px;
+    bottom:26px;
+    left:50px;
+    //width:100%;
+    right:0px;
+    background: #252526;
+    color:#fff;
+    .code-edit{
+        position:relative;
+        box-sizing: border-box;
+        height:100%;
+        //background:#252526;
+    }
+    .code-edit > div.cont{
+        position: relative;
+        box-sizing: border-box;
+        width:100%;
+        height:100%;
+        position: relative;
+    }
+    .code-edit > div.edit{
+    }
+    .code-left{
+        width:320px;
+        //border:1px solid #ddd;
+        box-sizing: border-box;
+        //padding-right:1px;
+        //min-width:300px;
+        float:left;
+        > div.cont{
+            background:#010C14;
+        }
+        .tree{
+            height:100%;
+            width:100%;
+            .tree-title{
+                line-height:30px;
+                padding:0 10px;
+                background:#081825;
+                border: 1px solid #091f2f;
+                color: #b3b6b8;
+                font-size: 14px;
+                ol{
+                    position:absolute;
+                    right:0px;
+                    top:0px;
+                    li{
+                        margin-right:5px;
+                        a{
+                            display: block;
+                            width:30px;
+                            height:30px;
+                            background:url(/images/icon/route-add.png)no-repeat;
+                            text-indent:-9999px;
+                            background-position-y: center;
+                        }
+                    }
+                }
+            }
+            .tree-cont{
+                position: absolute;
+                top:32px;
+                bottom:0px;
+                right:0px;
+                left:0px;
+                overflow-y:auto;
+                box-sizing: border-box;
+                font-size:13px;
+                .tree-node{
+                    position: relative;
+                    line-height:25px;
+                    overflow:hidden;
+                    .node-icon{
+                        position:relative;
+                        top:-2px;
+                        display:inline-block;
+                        width:12px;height:12px;
+                        background:url(../images/jia.png)no-repeat;
+                        background-size:12px 12px;
+                        vertical-align: middle;
+                    }
+                    .node-name{
+                        font-size:14px;
+                        i{
+                            font-size:12px;
+                            color:#555555;
+                            font-style: normal;
+                            margin-left:6px;
+                        }
+                        ins{
+                            font-size:12px;
+                            color:#3894dc;
+                            text-decoration:none;
+                        }
+                    }
+                    .jian{
+                        background:url(../images/jian.png)no-repeat;
+                        background-size:12px 12px;
+                    }
+                    > ul > li{
+                        position:relative;
+                        .active{
+                            background:#1c3a52;
+                        }
+                        > .tree-node{
+                            margin-left:22px;
+                        }
+                        span{
+                            position:relative;
+                            padding-left:5px;
+                            display:inline-block;
+                            width:100%;
+                            height:25px;
+                            .node-pre-line{
+                                position:absolute;
+                                top:12px;
+                                left:-12px;
+                                height:1px;
+                                border-top:1px dashed #423a3a;
+                                width:10px;                                    
+                            }
+                        }
+                    }
+                    > ul > li >span.checked{
+                        background:#161616;
+                    }
+                    > ul > li >span:not(.active):hover{
+                        background:#121111;
+                    }
+                    > .tree-line{
+                        width:12px;
+                        position: absolute;
+                        top:26px;
+                        left:12px;
+                        bottom:12px;
+                        border-left:1px dashed #777777;
+                        border-bottom:1px dashed #777777;
+                    }
+                    .new-input{
+                        display:inline-block;
+                        border: 1px solid #53e91e;
+                        margin-left: 5px;
+                        font-size: 14px;
+                    }
+                    .cancel-input{
+                        position: relative;
+                        /* right: -15px; */
+                        width: 16px;
+                        height: 23px;
+                        /* display: inline-block; */
+                        top: 0px;
+                        background: #1b1b1b;
+                    }
+                }
+            }
+        }
+        .card-bar{
+            position:absolute;
+            display:block;
+            z-index:1;
+            cursor:w-resize;
+            right:-2px;
+            top:0px;
+            width:2px;
+            height:100%;
+            user-selection: none;
+            //background:red;
+        }
+        .card-bar:hover{
+            background:#363633;
+        }
+
+    }
+
+}

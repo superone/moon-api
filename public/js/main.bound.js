@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cf790b4e5bd73b0f42d1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d4ca43e0b607f95a0e1b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9872,7 +9872,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9914,7 +9914,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -11475,11 +11475,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = Vue.extend({
-    
+/* harmony default export */ __webpack_exports__["default"] = Vue.extend({        
     components:{
         subCom: __WEBPACK_IMPORTED_MODULE_0__sub__
     },
@@ -11487,8 +11505,50 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             add: "",
             del : "",
-            comsids : [111],
-            coms:[]
+            showSelects : false,
+            coms : [{
+                    id:111,
+                    title:"router：/",
+                    tabs : ["Configure","ClientTest","Input",
+                    "Output","ClientMock","Transition",
+                    "ServiceTest","Request","Receive",
+                    "Help"],
+                    titleTabs : [
+                        "GET" 
+                    ]
+                },{
+                    id:111,
+                    title:"router：/user",
+                    tabs : ["Configure","ClientTest","Input",
+                    "Output","ClientMock","Transition",
+                    "ServiceTest","Request","Receive",
+                    "Help"],
+                    titleTabs : [
+                        "GET" ,  "UPDATE" , "DELETE"
+                    ]
+                },{
+                    id:222,
+                    title:"router：/router",
+                    tabs : ["Configure","ClientTest","Input",
+                    "Output","ClientMock","Transition",
+                    "ServiceTest","Request","Receive",
+                    "Help"],
+                    titleTabs : [
+                        "GET" , "POST" , "PUT" , "DELETE"
+                    ]
+                },{
+                    id:333,
+                    title:"router：/document",
+                    tabs : ["Configure","ClientTest","Input",
+                    "Output","ClientMock","Transition",
+                    "ServiceTest","Request","Receive",
+                    "Help"],
+                    titleTabs : [
+                        "PUT" , "UPDATE" , "DELETE"
+                    ]
+                }],
+            isFull : false,
+            currentTab : 0
         }
     },
     methods : {
@@ -11500,20 +11560,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.comsids.push(ran);
             //this.current = ran;
             //console.log(this.current);
+        },
+        changeRouter( index ){
+            if ( index !== this.currentTab ) {
+                this.$data.currentTab = index;
+                this.selectsMenu(false);
+            }
+        },
+        onChangeFull( val ){
+            this.$data.isFull = val ;
+        },
+        selectsMenu( val ){
+            this.showSelects = val;
         }
     },
     watch : {
-        // current ( newVal, oldVal ){
-        //     const me = this;
-        //     console.log(newVal);
-        //     const ran = newVal;
-        //     setTimeout(function(){
-        //         const com = new sub({
-        //             el : "#"+ran
-        //         });
-        //         me.coms.push(com);
-        //     },100)
-        // }
+        
     }
 });
 
@@ -11536,15 +11598,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
+    props : ["isFull","tabItem","currentRouter","routerIndex"],
     data () {
         return {
-            i:0,
-            current : "",
-            msg: '这是一个自组件'
+            localIsFull : this.isFull,
+            currentTab : 0,
+            currentEdit : 0
         }
     },
     
@@ -11557,12 +11632,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if(typeof this[newV] === "function" ){
                 this[newV].call( this );
             }
+        },
+        localIsFull( val ){
+            this.$emit("on-isfull-change",val);
         }
     },
 
     methods : {
         initData(){
             this.$data.i += 1;
+        },
+        changeMethod( index ){
+            this.$data.currentTab = index;
+        },
+        changeTab( index ){
+            this.$data.currentEdit = index;
+        },
+        doubleClick( e ){
+            let element = e.currentTarget;
+            if (element.classList.contains('active')) {
+                this.localIsFull = !this.localIsFull;
+            }
         }
     }
 });
@@ -11973,46 +12063,68 @@ if (true) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "code-edit code-right"
+    staticClass: "code-edit code-right",
+    class: {
+      'sizefull': _vm.isFull
+    }
   }, [_c('div', {
     staticClass: "cont"
-  }, _vm._l((_vm.comsids), function(id) {
-    return _c('div', {
-      attrs: {
-        "id": id
+  }, [_c('div', {
+    staticClass: "tab-select-box",
+    class: {
+      'show': _vm.showSelects
+    },
+    on: {
+      "mouseenter": function($event) {
+        _vm.selectsMenu(true)
+      },
+      "mouseleave": function($event) {
+        _vm.selectsMenu(false)
       }
-    }, [_vm._m(0, true), _vm._v(" "), _c('sub-com')], 1)
-  }))])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "method-tab"
+    }
+  }, [_c('ul', [_c('li', {
+    staticClass: "current-edit",
+    class: {
+      'showMenu': _vm.showSelects
+    }
   }, [_c('a', {
-    staticClass: "method-btn more-add",
     attrs: {
       "href": "javascript:;"
     }
-  }, [_vm._v("+")]), _vm._v(" "), _c('a', {
-    staticClass: "method-btn active",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("GET")]), _vm._v(" "), _c('a', {
-    staticClass: "method-btn",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("POST")]), _vm._v(" "), _c('a', {
-    staticClass: "method-btn",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("DELETE")]), _vm._v(" "), _c('a', {
-    staticClass: "method-btn",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("UPDATE")])])
-}]}
+  }, [_vm._v("\n                    " + _vm._s(_vm.coms[_vm.currentTab].title) + "\n                    ")])])]), _vm._v(" "), _c('ul', _vm._l((_vm.coms), function(item, index) {
+    return _c('li', {
+      staticClass: "edit-select",
+      class: {
+        'hide': !_vm.showSelects, 'active': (index === _vm.currentTab), 'showMenu': _vm.showSelects
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeRouter(index)
+        }
+      }
+    }, [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      }
+    }, [_c('i', {
+      class: {
+        'hide': !(index === _vm.currentTab)
+      }
+    }, [_vm._v("√")]), _vm._v(_vm._s(item.title) + "\n                    ")])])
+  }))]), _vm._v(" "), _vm._l((_vm.coms), function(item, index) {
+    return _c('sub-com', {
+      attrs: {
+        "is-full": _vm.isFull,
+        "tab-item": item,
+        "current-router": _vm.currentTab,
+        "router-index": index
+      },
+      on: {
+        "on-isfull-change": _vm.onChangeFull
+      }
+    })
+  })], 2)])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (true) {
   module.hot.accept()
@@ -12068,14 +12180,59 @@ if (true) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "edit-space router-edit",
+    class: {
+      'hide': (_vm.routerIndex !== _vm.currentRouter)
+    },
+    attrs: {
+      "id": _vm.tabItem.id
+    }
+  }, [_c('div', {
+    staticClass: "method-tab"
+  }, [_c('a', {
+    staticClass: "method-btn more-add",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("+")]), _vm._v(" "), _vm._l((_vm.tabItem.titleTabs), function(k, index) {
+    return _c('a', {
+      class: {
+        'method-btn': true, 'active': (_vm.currentTab == index)
+      },
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeMethod(index)
+        },
+        "dblclick": function($event) {
+          _vm.doubleClick($event)
+        }
+      }
+    }, [_vm._v("\n            " + _vm._s(k) + "\n        ")])
+  })], 2), _vm._v(" "), _c('div', {
     staticClass: "route-edit-main"
   }, [_c('div', {
     staticClass: "edit-title"
-  }, [_c('ul', [_c('li', [_vm._v("input")]), _vm._v(" "), _c('li', [_vm._v("output")]), _vm._v(" "), _c('li', [_vm._v("client-mock")])])])])
-}]}
+  }, [_c('ul', _vm._l((_vm.tabItem.tabs), function(k, index) {
+    return _c('li', {
+      class: {
+        'first': index === 0, 'active': _vm.currentEdit === index
+      }
+    }, [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeTab(index)
+        }
+      }
+    }, [_vm._v(_vm._s(k))])])
+  }))])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (true) {
   module.hot.accept()

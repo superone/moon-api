@@ -1,296 +1,30 @@
-*{
-    border:0;padding:0;margin:0;
-    font-size:12px;
-    font-family: Lato,Microsoft YaHei,Arial;
-}
-@stridng : random();
-a{
-    color:#FEFEFE;
-    text-decoration:none;
-}
-li{
-    list-style:none; 
-}
-.hide{
-    display:none;
-}
-.page-header{
-    position:relative;
-    height:50px;
-    background:#32404b;
-    border-bottom:1px solid #101219;
-    .page-logo{
-        position:relative;
-        top:5px;
-        left:8px;
-        height:37px;
-    }
-}
-.page-main{
-    position:fixed;
-    top:51px;
-    bottom:26px;
-    left:50px;
-    width:100%;
-    background: #252526;
-    color:#fff;
-    .code-edit{
-        position:relative;
-        box-sizing: border-box;
-        height:100%;
-        //background:#252526;
-    }
-    .code-edit > div.cont{
-        position: relative;
-        box-sizing: border-box;
-        width:100%;
-        height:100%;
-        position: relative;
-        background: #1b1b1b;
-    }
-    .code-edit > div.edit{
-    }
-    .code-left{
-        width:320px;
-        //padding-right:1px;
-        //min-width:300px;
-        float:left;
-        .tree{
-            height:100%;
-            width:100%;
-            .tree-title{
-                line-height:30px;
-                padding:0 10px;
-                background:#2e0101;
-                border: 1px solid #381616;
-                color: #b3b6b8;
-                font-size: 14px;
-                ol{
-                    position:absolute;
-                    right:0px;
-                    top:0px;
-                    li{
-                        margin-right:5px;
-                        a{
-                            display: block;
-                            width:30px;
-                            height:30px;
-                            background:url(/images/icon/route-add.png)no-repeat;
-                            text-indent:-9999px;
-                            background-position-y: center;
-                        }
-                    }
-                }
-            }
-            .tree-cont{
-                position: absolute;
-                top:32px;
-                bottom:0px;
-                right:0px;
-                left:0px;
-                overflow-y:auto;
-                box-sizing: border-box;
-                font-size:13px;
-                .tree-node{
-                    position: relative;
-                    line-height:25px;
-                    overflow:hidden;
-                    .node-icon{
-                        position:relative;
-                        top:-2px;
-                        display:inline-block;
-                        width:12px;height:12px;
-                        background:url(../images/jia.png)no-repeat;
-                        background-size:12px 12px;
-                        vertical-align: middle;
-                    }
-                    .node-name{
-                        font-size:14px;
-                        i{
-                            font-size:12px;
-                            color:#555555;
-                            font-style: normal;
-                            margin-left:6px;
-                        }
-                        ins{
-                            font-size:12px;
-                            color:#3894dc;
-                            text-decoration:none;
-                        }
-                    }
-                    .jian{
-                        background:url(../images/jian.png)no-repeat;
-                        background-size:12px 12px;
-                    }
-                    > ul > li{
-                        position:relative;
-                        .active{
-                            background:#1c3a52;
-                        }
-                        > .tree-node{
-                            margin-left:22px;
-                        }
-                        span{
-                            position:relative;
-                            padding-left:5px;
-                            display:inline-block;
-                            width:100%;
-                            height:25px;
-                            .node-pre-line{
-                                position:absolute;
-                                top:12px;
-                                left:-12px;
-                                height:1px;
-                                border-top:1px dashed #423a3a;
-                                width:10px;                                    
-                            }
-                        }
-                    }
-                    > ul > li >span.checked{
-                        background:#161616;
-                    }
-                    > ul > li >span:not(.active):hover{
-                        background:#121111;
-                    }
-                    > .tree-line{
-                        width:12px;
-                        position: absolute;
-                        top:26px;
-                        left:12px;
-                        bottom:12px;
-                        border-left:1px dashed #777777;
-                        border-bottom:1px dashed #777777;
-                    }
-                    .new-input{
-                        display:inline-block;
-                        border: 1px solid #53e91e;
-                        margin-left: 5px;
-                        font-size: 14px;
-                    }
-                    .cancel-input{
-                        position: relative;
-                        /* right: -15px; */
-                        width: 16px;
-                        height: 23px;
-                        /* display: inline-block; */
-                        top: 0px;
-                        background: #1b1b1b;
-                    }
-                }
-            }
-        }
-        .card-bar{
-            position:absolute;
-            display:block;
-            z-index:1;
-            cursor:w-resize;
-            right:-2px;
-            top:0px;
-            width:2px;
-            height:100%;
-            user-selection: none;
-            //background:red;
-        }
-        .card-bar:hover{
-            background:#363633;
-        }
-
-    }
-    .code-right{
-        //position: absolute;
-        padding: 0 0 0 0px;
-        top:0px;
-        left:3px;
-        overflow:hidden;
-        div.cont{
-            position:relative;
-            background:#272822;
-            .method-tab{
-                position:relative;
-                padding:2px 57px 0 0px;
-                text-align:right;
-                .method-btn{
-                    display:inline-block;
-                    line-height:28px;
-                    padding:0 20px;
-                    border:1px solid #2e0101;
-                    color:#fff;
-                    background:#1c3a52;
-                }
-                .method-btn:not(.more-add):not(.active):hover{
-                    background:#2e0101;
-                }
-                .active{
-                    position:relative;
-                    z-index:1;
-                    background:#110f0f;
-                    color:#ffffff;
-                    border: 1px solid #ddd;
-                    top: 1px;
-                    border-bottom: 1px solid #110f0f;
-                }
-                .more-add{
-                    background:#2c2c29;
-                    border:1px solid #23241e;
-                    
-                }
-                .more-add:hover{
-                    background:#3b4044;
-                }
-            }
-            .route-edit-main{
-                position: absolute;
-                padding: 0 10px;
-                background: #110f0f;
-                top: 32px;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                border-top:1px solid #ddd;
-                .edit-title{
-                    padding:5px 0;
-                    li{
-                        display:inline-block;
-                        line-height:28px;
-                        padding:0 15px;
-                        background:#3a3838;
-                        margin-left:10px;
-                        font-size: 15px;
-                    }
-                }
-            }
-
-
-
-
-        }
-    }
-}
-
-.left-bar{
-    position:fixed;
-    left:0px;
-    top:51px;
-    width:50px;
-    height:100%;
-    background:#1b2832;
-    box-shadow: 2px 0px 3px #201e1e;
-    -moz-box-shadow: 2px 0px 3px #201e1e;
-    li{
+@import "./base";
+@import "./header";
+@import "./main";
+@import "./right";
+     
+.left-bar{  
+    position:fixed; 
+    left:0px; 
+    top:51px;   
+    width:50px; 
+    height:100%;  
+    background:#08253c; 
+    box-shadow: 2px 0px 3px #201e1e;  
+    -moz-box-shadow: 2px 0px 3px #201e1e;    
+    li{ 
         text-align:center;
-        a{
-            display:block;
-            width:100%;
-            height:100%;
+        a{ 
+            display:block;  
             padding:10px 0;
-        }
+        }  
     }
-    li.top-btn{
+    li.top-btn{   
         a{
-            padding:5px 0;
-        }
-    }
-    li.active{
+            padding:5px 0; 
+        } 
+    }  
+    li.active{   
         background:#111111;
     }
     li:not(.active):hover{
@@ -298,11 +32,11 @@ li{
     }
     
 }
-.page-footer{
+.page-footer{ 
     position:fixed;
     bottom:0px;
     width:100%;
-    height:25px;
+    height:25px; 
     background: rgba(176, 176, 176, 0.98);
     border-top: 1px solid #2b2b2b;
 }

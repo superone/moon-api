@@ -18,7 +18,7 @@ li {
 .page-header {
   position: relative;
   height: 50px;
-  background: #32404b;
+  background: #0c2f4a;
   border-bottom: 1px solid #101219;
 }
 .page-header .page-logo {
@@ -29,10 +29,11 @@ li {
 }
 .page-main {
   position: fixed;
+  z-index: 20;
   top: 51px;
   bottom: 26px;
   left: 50px;
-  width: 100%;
+  right: 0px;
   background: #252526;
   color: #fff;
 }
@@ -46,11 +47,14 @@ li {
   width: 100%;
   height: 100%;
   position: relative;
-  background: #1b1b1b;
 }
 .page-main .code-left {
   width: 320px;
+  box-sizing: border-box;
   float: left;
+}
+.page-main .code-left > div.cont {
+  background: #010C14;
 }
 .page-main .code-left .tree {
   height: 100%;
@@ -59,8 +63,8 @@ li {
 .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #2e0101;
-  border: 1px solid #381616;
+  background: #081825;
+  border: 1px solid #091f2f;
   color: #b3b6b8;
   font-size: 14px;
 }
@@ -191,68 +195,175 @@ li {
 .page-main .code-left .card-bar:hover {
   background: #363633;
 }
-.page-main .code-right {
+.code-right {
+  box-sizing: border-box;
   padding: 0 0 0 0px;
   top: 0px;
-  left: 3px;
   overflow: hidden;
+  border: 1px solid #0c2233;
 }
-.page-main .code-right div.cont {
+.code-right div.cont {
   position: relative;
-  background: #272822;
-}
-.page-main .code-right div.cont .method-tab {
-  position: relative;
-  padding: 2px 57px 0 0px;
   text-align: right;
+  background: #0a151b;
 }
-.page-main .code-right div.cont .method-tab .method-btn {
+.code-right div.cont .edit-space {
+  height: 100%;
+}
+.code-right div.cont .edit-space .route-edit-main {
+  position: relative;
+  height: 100%;
+  width: 120px;
+  text-align: center;
+  line-height: 30px;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title {
+  position: relative;
+  height: 100%;
+  background: #051725;
+  border-right: 1px solid #0d2e48;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title li {
+  font-size: 15px;
+  background: #051725;
+  border: 1px solid #051725;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title li a {
+  font-size: 15px;
+  display: block;
+  text-align: left;
+  padding: 0 15px;
+  line-height: 45px;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title li a i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title li a:hover {
+  color: #fff;
+  background: #370f0f;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active {
+  position: relative;
+  right: -1px;
+  border: 1px solid #0d2e48;
+  background: #0a151b;
+  border-right: none;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active a:hover {
+  background: none;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .first {
+  position: relative;
+  top: -1px;
+}
+.code-right div.cont .edit-space .method-tab {
+  position: relative;
+  right: -1px;
+  padding: 2px 10px 0 0px;
+  text-align: right;
+  background: #051725;
+  border-bottom: 1px solid #0d2e48;
+}
+.code-right div.cont .edit-space .method-tab .method-btn {
   display: inline-block;
   line-height: 28px;
   padding: 0 20px;
-  border: 1px solid #2e0101;
+  border: 1px solid #19354c;
   color: #fff;
-  background: #1c3a52;
+  background: #05253f;
+  border-bottom: none;
+  margin-right: 5px;
 }
-.page-main .code-right div.cont .method-tab .method-btn:not(.more-add):not(.active):hover {
+.code-right div.cont .edit-space .method-tab .method-btn:not(.more-add):not(.active):hover {
   background: #2e0101;
 }
-.page-main .code-right div.cont .method-tab .active {
+.code-right div.cont .edit-space .method-tab .active {
   position: relative;
   z-index: 1;
-  background: #110f0f;
+  background: #0a151b;
   color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #0d2e48;
   top: 1px;
-  border-bottom: 1px solid #110f0f;
+  border-bottom: 1px solid #0a151b;
 }
-.page-main .code-right div.cont .method-tab .more-add {
+.code-right div.cont .edit-space .method-tab .more-add {
+  position: relative;
+  line-height: 23px;
+  padding: 0 10px;
   background: #2c2c29;
   border: 1px solid #23241e;
+  box-shadow: -1px -1px #121212;
 }
-.page-main .code-right div.cont .method-tab .more-add:hover {
-  background: #3b4044;
+.code-right div.cont .edit-space .method-tab .more-add:hover {
+  box-shadow: 2px 2px #121212;
 }
-.page-main .code-right div.cont .route-edit-main {
+.code-right div.cont .tab-select-box {
   position: absolute;
-  padding: 0 10px;
-  background: #110f0f;
-  top: 32px;
+  border: 1px solid #051725;
+  left: 5px;
+  top: 2px;
+  z-index: 21;
+}
+.code-right div.cont .tab-select-box li {
+  line-height: 25px;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 20px;
+}
+.code-right div.cont .tab-select-box li a {
+  font-size: 15px;
+}
+.code-right div.cont .tab-select-box .current-edit {
+  border: 1px solid #051725;
+}
+.code-right div.cont .tab-select-box .current-edit a {
+  color: #ddd;
+}
+.code-right div.cont .tab-select-box .edit-select {
+  position: relative;
+  line-height: 30px;
+}
+.code-right div.cont .tab-select-box .edit-select i {
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  font-size: 16px;
+}
+.code-right div.cont .tab-select-box .edit-select.hide {
+  display: none;
+}
+.code-right div.cont .tab-select-box .showMenu.current-edit {
+  border: 1px solid #032540;
+  background: #051d30;
+}
+.code-right div.cont .tab-select-box .showMenu.edit-select {
+  background: #082135;
+  padding: 0 20px;
+}
+.code-right div.cont .tab-select-box .showMenu.edit-select a {
+  color: #fff;
+}
+.code-right div.cont .tab-select-box .edit-select.active {
+  background: #010f1b;
+}
+.code-right div.cont .tab-select-box .showMenu.edit-select:not(.active):hover {
+  background: #370f0f;
+}
+.code-right div.cont .tab-select-box .showMenu.edit-select:not(.active):hover a {
+  color: #ddd;
+}
+.code-right div.cont .tab-select-box.show {
+  border: 1px solid #19354c;
+}
+.code-right.sizefull {
+  position: fixed;
   left: 0px;
   right: 0px;
+  top: 0px;
   bottom: 0px;
-  border-top: 1px solid #ddd;
-}
-.page-main .code-right div.cont .route-edit-main .edit-title {
-  padding: 5px 0;
-}
-.page-main .code-right div.cont .route-edit-main .edit-title li {
-  display: inline-block;
-  line-height: 28px;
-  padding: 0 15px;
-  background: #3a3838;
-  margin-left: 10px;
-  font-size: 15px;
 }
 .left-bar {
   position: fixed;
@@ -260,7 +371,7 @@ li {
   top: 51px;
   width: 50px;
   height: 100%;
-  background: #1b2832;
+  background: #08253c;
   box-shadow: 2px 0px 3px #201e1e;
   -moz-box-shadow: 2px 0px 3px #201e1e;
 }
@@ -269,8 +380,6 @@ li {
 }
 .left-bar li a {
   display: block;
-  width: 100%;
-  height: 100%;
   padding: 10px 0;
 }
 .left-bar li.top-btn a {
