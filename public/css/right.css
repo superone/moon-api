@@ -3,60 +3,157 @@
   padding: 0 0 0 0px;
   top: 0px;
   overflow: hidden;
-  border: 1px solid #0c2233;
+  border-left: 3px solid #2c2e2e;
 }
 .code-right div.cont {
   position: relative;
-  text-align: right;
-  background: #0a151b;
+  background: #272822;
 }
 .code-right div.cont .edit-space {
   height: 100%;
+  position: relative;
 }
 .code-right div.cont .edit-space .route-edit-main {
-  position: relative;
-  height: 100%;
-  width: 120px;
-  text-align: center;
+  position: absolute;
+  top: 33px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   line-height: 30px;
+}
+.code-right div.cont .edit-space .route-edit-main .route-editor {
+  width: 100%;
+  height: 100%;
+}
+.code-right div.cont .edit-space .route-edit-main .work-space {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 140px;
+  border-left: 1px solid #647179;
+  border-bottom: 1px solid #647179;
+  padding: 10px;
+}
+.code-right div.cont .edit-space .route-edit-main .work-space .work-main {
+  position: relative;
+  border: 1px solid #2e2f29;
+  width: 100%;
+  height: 100%;
+}
+.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor-title {
+  height: 30px;
+  line-height: 30px;
+  background: #2e2f29;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: #1d1e1a;
+}
+.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  resize: none;
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title {
   position: relative;
+  float: right;
   height: 100%;
-  background: #051725;
-  border-right: 1px solid #0d2e48;
+  width: 140px;
+  background: #333333;
+  border-left: 1px solid #647179;
 }
-.code-right div.cont .edit-space .route-edit-main .edit-title li {
+.code-right div.cont .edit-space .route-edit-main .edit-title ul > li {
   font-size: 15px;
-  background: #051725;
-  border: 1px solid #051725;
+  background: #333333;
+  border: 1px solid #333333;
 }
-.code-right div.cont .edit-space .route-edit-main .edit-title li a {
+.code-right div.cont .edit-space .route-edit-main .edit-title ul > li > a {
   font-size: 15px;
   display: block;
   text-align: left;
   padding: 0 15px;
   line-height: 45px;
 }
-.code-right div.cont .edit-space .route-edit-main .edit-title li a i {
+.code-right div.cont .edit-space .route-edit-main .edit-title ul > li > a > i {
   display: inline-block;
   vertical-align: middle;
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
+  background: url(/images/icon/icons.png) no-repeat;
+  background-position: -25px 0px;
 }
-.code-right div.cont .edit-space .route-edit-main .edit-title li a:hover {
-  color: #fff;
+.code-right div.cont .edit-space .route-edit-main .edit-title ul > li a:hover {
   background: #370f0f;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .sub-items {
+  display: none;
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title .active {
   position: relative;
-  right: -1px;
-  border: 1px solid #0d2e48;
-  background: #0a151b;
-  border-right: none;
+  left: -1px;
+  border: 1px solid #647179;
+  background: #272822;
+  border-left: none;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active > a {
+  color: #fff;
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title .active a:hover {
   background: none;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items {
+  display: block;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li {
+  line-height: 45px;
+  border: 1px solid #272822;
+  background: #272822;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li a {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li a i {
+  display: none;
+  margin-right: 8px;
+  width: 28px;
+  height: 28px;
+  background: url(/images/icon/icons.png) no-repeat;
+  background-position: -73px 5px;
+  vertical-align: middle;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur {
+  position: relative;
+  left: -8px;
+  background: #1d1e1a;
+  border: 1px solid #2e2f29;
+  border-left: none;
+  margin-bottom: 10px;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur a {
+  color: #ed4848;
+  text-align: left;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur a i {
+  display: inline-block;
+}
+.code-right div.cont .edit-space .route-edit-main .edit-title li.cur.active {
+  position: relative;
+  left: -1px;
+  border: 1px solid #647179;
+  background: #272822;
+  border-left: none;
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title .first {
   position: relative;
@@ -64,11 +161,9 @@
 }
 .code-right div.cont .edit-space .method-tab {
   position: relative;
-  right: -1px;
-  padding: 2px 10px 0 0px;
-  text-align: right;
-  background: #051725;
-  border-bottom: 1px solid #0d2e48;
+  padding: 2px 0px 0 10px;
+  background: #333333;
+  border-bottom: 1px solid #647179;
 }
 .code-right div.cont .edit-space .method-tab .method-btn {
   display: inline-block;
@@ -86,11 +181,11 @@
 .code-right div.cont .edit-space .method-tab .active {
   position: relative;
   z-index: 1;
-  background: #0a151b;
+  background: #272822;
   color: #ffffff;
-  border: 1px solid #0d2e48;
+  border: 1px solid #647179;
   top: 1px;
-  border-bottom: 1px solid #0a151b;
+  border-bottom: 1px solid #272822;
 }
 .code-right div.cont .edit-space .method-tab .more-add {
   position: relative;
@@ -105,8 +200,8 @@
 }
 .code-right div.cont .tab-select-box {
   position: absolute;
-  border: 1px solid #051725;
-  left: 5px;
+  border: 1px solid #333333;
+  right: 145px;
   top: 2px;
   z-index: 21;
 }
@@ -120,7 +215,7 @@
   font-size: 15px;
 }
 .code-right div.cont .tab-select-box .current-edit {
-  border: 1px solid #051725;
+  border: 1px solid #333333;
 }
 .code-right div.cont .tab-select-box .current-edit a {
   color: #ddd;
@@ -133,6 +228,7 @@
   position: absolute;
   left: 3px;
   top: 2px;
+  color: red;
   font-size: 16px;
 }
 .code-right div.cont .tab-select-box .edit-select.hide {

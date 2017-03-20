@@ -25,7 +25,7 @@
   float: left;
 }
 .page-main .code-left > div.cont {
-  background: #010C14;
+  background: #252526;
 }
 .page-main .code-left .tree {
   height: 100%;
@@ -34,8 +34,8 @@
 .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #081825;
-  border: 1px solid #091f2f;
+  background: #333333;
+  border: 1px solid #211d1d;
   color: #b3b6b8;
   font-size: 14px;
 }
@@ -150,7 +150,6 @@
   height: 23px;
   /* display: inline-block; */
   top: 0px;
-  background: #1b1b1b;
 }
 .page-main .code-left .card-bar {
   position: absolute;

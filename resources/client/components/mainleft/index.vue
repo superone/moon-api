@@ -62,7 +62,7 @@
                     this.cardBarPageX = 0;                    
                     this.lastPageX = 0;
                 }
-            }
+           }
         }
         
     })
