@@ -5,6 +5,7 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as path from "path";
 import * as fs from "fs";
+import * as http from "http";
 
 import * as Server from "../core/server";
 import * as indexRoute from "./routes/index";
@@ -39,6 +40,10 @@ class userServer extends Server {
 
   }
 
+  public getPort():number {
+    var config = this.getConfig();
+    return config['server-port'] || 8080;
+  }
   /**
    * Configure application
    *
@@ -47,6 +52,9 @@ class userServer extends Server {
    * @return void
    */
   private initConfig() : void {
+    const port : number = this.getPort();
+    const me : userServer = this;
+
     //configure jade
     this.app.set("views", path.join(__dirname, "../../resources/userviews"));
     this.app.set("view engine", "jade");
@@ -69,6 +77,19 @@ class userServer extends Server {
       err.status = 404;
       next(err);
     });
+
+    this.app.set( "port", port );
+    //create http server
+    var server = this.server = http.createServer(this.app);
+
+    //listen on provided ports
+    server.listen(port);
+
+    //add error handler
+    server.on("error",  this.onError);
+
+    //start listening on port
+    server.on("listening", this.onListening);
   }
 
   /**

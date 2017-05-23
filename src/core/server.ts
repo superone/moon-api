@@ -1,8 +1,10 @@
 /// <reference path="../_all.d.ts" />
 "use strict";
+var debug = require("debug")("express:server");
 import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as path from "path";
+import * as http from "http";
 
 import * as fs from "fs";
 
@@ -18,6 +20,8 @@ class Server {
 
   private config : any;
 
+  private server : http.Server;
+
 
   /**
    * Constructor.
@@ -26,21 +30,19 @@ class Server {
    * @constructor
    */
   constructor() {
-    //create expressjs application
-    this.app = express();
+        if( !this.loadSysconfig() ){
+            console.log("Can't load the config file in admin server");
+            process.exit(1); 
+        }else{
+            //create expressjs application
+            this.app = express();
 
-    //configure application
-    this.initConfig();
+            //configure application
+            this.initConfig();
 
-    //configure routes
-    this.routes(); 
-
-    if( !this.loadSysconfig() ){
-
-        console.log("Can't load the config file in admin server");
-        process.exit(1); 
-
-    }
+            //configure routes
+            this.routes(); 
+        }
   }
 
   /**
@@ -91,6 +93,41 @@ class Server {
         }else{
             return false;
         }
+  }
+  
+  //服务错误时的处理
+  private onError( error ) : void {
+      var addr = this.address();
+
+      if (error.syscall !== "listen") {
+        throw error;
+      }
+
+      var bind = typeof addr === "string"
+        ? "Pipe " + addr
+        : "Port " + addr.port;
+
+      // handle specific listen errors with friendly messages
+      switch (error.code) {
+        case "EACCES":
+          console.error(bind + " requires elevated privileges");
+          process.exit(1);
+          break;
+        case "EADDRINUSE":
+          console.error(bind + " is already in use");
+          process.exit(1);
+          break;
+        default:
+          throw error;
+      }
+  }
+  //listen message
+  private onListening( server ) : void {
+        var addr = this.address();
+        var bind = typeof addr === "string"
+            ? "pipe " + addr
+            : "port " + addr.port;
+        debug("Listening on " + bind);
   }
 }
 

@@ -5,6 +5,7 @@ import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as path from "path";
 import * as fs from "fs";
+import * as http from "http";
 
 import * as Server from "../core/server";
 import * as indexRoute from "./routes/index";
@@ -50,6 +51,11 @@ class adminServer extends Server {
 
   }
 
+  public getPort():number {
+    var config = this.getConfig();
+    return config['admin-port'] || 8899;
+  }
+
   /**
    * Configure application
    *
@@ -59,6 +65,9 @@ class adminServer extends Server {
    */
   private initConfig() : void {
     //configure jade
+    const port : number = this.getPort();
+    const me : adminServer = this;
+
     this.app.set("views", path.join(__dirname, "../../resources/views"));
     this.app.set("view engine", "jade");
 
@@ -80,6 +89,20 @@ class adminServer extends Server {
       err.status = 404;
       next(err);
     });
+
+    this.app.set( "port", port );
+    //create http server
+    var server = this.server = http.createServer( this.app );
+
+    //listen on provided ports
+    server.listen(port);
+
+    //add error handler
+    server.on("error",  this.onError);
+
+    //start listening on port
+    server.on("listening", this.onListening);
+
   }
 
   /**
@@ -103,30 +126,6 @@ class adminServer extends Server {
     //use router middleware
     this.app.use(router);
   }
-
-  // public getConfig () : any {
-
-  //     return this.config;
-
-  // }
-
-  // private loadSysconfig() : boolean{
-
-  //       let loadPath = path.join( process.cwd() , "moon.config.json");
-  //       let exists = fs.existsSync( loadPath );
-  //       if(exists){
-  //           try{
-  //             let data = fs.readFileSync( loadPath , "utf-8");
-  //             this.config = JSON.parse(data);
-  //           }catch(e){
-  //               console.log("Unknow the config file");
-  //               return false;
-  //           }
-  //           return true;
-  //       }else{
-  //           return false;
-  //       }
-  // }
 }
 
 var server = adminServer.bootstrap();

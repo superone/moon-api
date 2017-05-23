@@ -3,5 +3,6 @@
     "admin-port" : 8888,
     "server-port" : 3000,
     "admin-route" : "{space}/adminroute",
-    "server-route" : "{space}/rootroute"
+    "server-route" : "{space}/rootroute",
+    "server-view" : "{space}/view/userserver"
 }
