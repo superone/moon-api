@@ -1,4 +1,7 @@
-module.exports = function(  req , res , next){
-        //res.render('index', {title:'MoonApi'});
-        res.end("/user");
-    }
+var fs = require("fs");
+var path = require("path");
+
+var str = "/user[get]"
+
+
+RESPONSE = str;

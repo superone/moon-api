@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53f962ef46247ceef779"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e81aca9c97b4a950ee1c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9872,7 +9872,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9886,7 +9886,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9900,7 +9900,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -9914,7 +9914,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -10348,13 +10348,13 @@ function isUndefined(arg) {
 
 
 /* styles */
-__webpack_require__(67)
+__webpack_require__(68)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(33),
   /* template */
-  __webpack_require__(55),
+  __webpack_require__(56),
   /* scopeId */
   null,
   /* cssModules */
@@ -10386,13 +10386,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(68)
+__webpack_require__(69)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(34),
   /* template */
-  __webpack_require__(56),
+  __webpack_require__(57),
   /* scopeId */
   null,
   /* cssModules */
@@ -10652,13 +10652,13 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(66)
+__webpack_require__(67)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(41),
   /* template */
-  __webpack_require__(54),
+  __webpack_require__(55),
   /* scopeId */
   null,
   /* cssModules */
@@ -10724,21 +10724,21 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(69)
+__webpack_require__(66)
 
 var Component = __webpack_require__(1)(
   /* script */
   __webpack_require__(43),
   /* template */
-  __webpack_require__(57),
+  __webpack_require__(54),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\Dev\\ChenBo\\chenbo Pros\\moonapi\\resources\\client\\components\\mainright\\sub.vue"
+Component.options.__file = "C:\\Dev\\ChenBo\\chenbo Pros\\moonapi\\resources\\client\\components\\mainright\\routerPanel.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] sub.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] routerPanel.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (true) {(function () {
@@ -10747,9 +10747,9 @@ if (true) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d9a18abe", Component.options)
+    hotAPI.createRecord("data-v-84d453c8", Component.options)
   } else {
-    hotAPI.reload("data-v-d9a18abe", Component.options)
+    hotAPI.reload("data-v-84d453c8", Component.options)
   }
 })()}
 
@@ -11490,8 +11490,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sub__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sub___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__sub__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__routerPanel__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__routerPanel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__routerPanel__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_menuData_js__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_menuData_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_menuData_js__);
 //
@@ -11531,12 +11531,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+//import * as subCom from "./sub";
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({        
     components:{
-        subCom: __WEBPACK_IMPORTED_MODULE_0__sub__
+        routerPanel: __WEBPACK_IMPORTED_MODULE_0__routerPanel__
     },
     data () {
         return {
@@ -11600,19 +11601,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
     props : ["item","tabIndex","currentMethod"],
     data (){
         return {
             currentEdit : 0,
+            currentEditTitle : "",
             currentSub : function( tabs ){
                  var re = [];
-                 for(var i = 0 ; i < tabs.tabs.length ; i++ ){
+                 for(var i = 0 ; i < tabs.grounds.length ; i++ ){
                      re[i] = 0 ;
                  }
                  return re;
@@ -11634,8 +11632,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         });
     },
     methods : {
-         changeSubTab( index , i ){
+         changeSubTab( index , i , sub){
              this.$set( this.currentSub , index , i);
+             this.currentEditTitle = this.item.grounds[this.currentEdit].title + "  >  " + sub.title;
          },
          changeTab( index ){
              this.$data.currentEdit = index;
@@ -11677,18 +11676,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 
-
 /* harmony default export */ __webpack_exports__["default"] = Vue.extend({
-    props : ["isFull","tabItem","currentRouter","routerIndex"],
-    components : {
+    components:{
         routerEditor: __WEBPACK_IMPORTED_MODULE_0__routerEditor__
     },
+    props : ["routerData","currentRouter","routerIndex"],
     data () {
-        return {
-            localIsFull : this.isFull,
-            currentMethod : 0,
-            currentEdit : 0
-        }
+            return {
+                localIsFull : this.isFull,
+                currentMethod : 0,
+                currentEdit : 0
+            }
     },
 
     computed: {
@@ -11727,7 +11725,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         changeSubTab( index , i ){
             this.$set( this.currentSub , index , i);
-            //this.currentSub[index] = i;
         }
     }
 });
@@ -12064,27 +12061,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     class: {
       'hide': _vm.currentMethod != _vm.tabIndex
     }
-  }, [_vm._l((_vm.item.tabs), function(k, index) {
-    return _c('div', {
-      staticClass: "work-space",
-      class: {
-        'hide': _vm.currentEdit != index
-      }
-    }, _vm._l((k.subs), function(sub, i) {
-      return _c('div', {
-        staticClass: "work-main",
-        class: {
-          'hide': i !== _vm.currentSub[index]
-        }
-      }, [_c('div', {
-        staticClass: "editor-title"
-      }, [_vm._v(_vm._s(sub.title))]), _vm._v(" "), _c('div', {
-        staticClass: "editor"
-      })])
-    }))
-  }), _vm._v(" "), _c('div', {
+  }, [_c('div', {
+    staticClass: "work-space"
+  }, [_c('div', {
+    staticClass: "work-main"
+  }, [_c('div', {
+    staticClass: "editor-title"
+  }, [_vm._v(" >  " + _vm._s(_vm.currentEditTitle))]), _vm._v(" "), _c('div', {
+    staticClass: "editor"
+  })])]), _vm._v(" "), _c('div', {
     staticClass: "edit-title"
-  }, [_c('ul', _vm._l((_vm.item.tabs), function(k, index) {
+  }, [_c('ul', _vm._l((_vm.item.grounds), function(k, index) {
     return _c('li', {
       class: {
         'first': index === 0, 'active': _vm.currentEdit === index, 'cur': k.subs.length === 0
@@ -12103,7 +12090,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }, _vm._l((k.subs), function(sub, i) {
       return _c('li', {
         class: {
-          'cur': i === _vm.currentSub[index]
+          'cur': i === _vm.currentSub[index], 'edit-background': i === _vm.currentSub[index]
         }
       }, [_c('a', {
         attrs: {
@@ -12111,12 +12098,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         },
         on: {
           "click": function($event) {
-            _vm.changeSubTab(index, i)
+            _vm.changeSubTab(index, i, sub)
           }
         }
       }, [_c('i', [_vm._v(" ")]), _vm._v(_vm._s(sub.title))])])
     }))])
-  }))])], 2)
+  }))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (true) {
@@ -12210,6 +12197,63 @@ if (true) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "edit-space router-edit",
+    class: {
+      'hide': (_vm.routerIndex !== _vm.currentRouter)
+    },
+    attrs: {
+      "id": _vm.routerData.id
+    }
+  }, [_c('div', {
+    staticClass: "method-tab"
+  }, [_vm._l((_vm.routerData.methodTabs), function(k, index) {
+    return _c('a', {
+      class: {
+        'method-btn': true, 'active': (_vm.currentMethod == index)
+      },
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeMethod(index)
+        },
+        "dblclick": function($event) {
+          _vm.doubleClick($event)
+        }
+      }
+    }, [_vm._v("\n            " + _vm._s(k.method) + "\n        ")])
+  }), _vm._v(" "), _c('a', {
+    staticClass: "method-btn more-add",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("+")])], 2), _vm._v(" "), _c('div', {
+    staticClass: "route-edit-main"
+  }, _vm._l((_vm.routerData.methodTabs), function(item, index) {
+    return _c('router-editor', {
+      attrs: {
+        "item": item,
+        "tab-index": index,
+        "current-method": _vm.currentMethod
+      }
+    })
+  }))])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (true) {
+  module.hot.accept()
+  if (module.hot.data) {
+     __webpack_require__(0).rerender("data-v-84d453c8", module.exports)
+  }
+}
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "code-edit code-right",
     class: {
       'sizefull': _vm.isFull
@@ -12259,10 +12303,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_vm._v("√")]), _vm._v(_vm._s(item.title) + "\n                    ")])])
   }))]), _vm._v(" "), _vm._l((_vm.coms), function(item, index) {
-    return _c('sub-com', {
+    return _c('router-panel', {
       attrs: {
         "is-full": _vm.isFull,
-        "tab-item": item,
+        "router-data": item,
         "current-router": _vm.currentRouter,
         "router-index": index
       },
@@ -12281,7 +12325,7 @@ if (true) {
 }
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -12298,7 +12342,7 @@ if (true) {
 }
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -12319,63 +12363,6 @@ if (true) {
   module.hot.accept()
   if (module.hot.data) {
      __webpack_require__(0).rerender("data-v-cd14121a", module.exports)
-  }
-}
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "edit-space router-edit",
-    class: {
-      'hide': (_vm.routerIndex !== _vm.currentRouter)
-    },
-    attrs: {
-      "id": _vm.tabItem.id
-    }
-  }, [_c('div', {
-    staticClass: "method-tab"
-  }, [_vm._l((_vm.tabItem.titleTabs), function(k, index) {
-    return _c('a', {
-      class: {
-        'method-btn': true, 'active': (_vm.currentMethod == index)
-      },
-      attrs: {
-        "href": "javascript:;"
-      },
-      on: {
-        "click": function($event) {
-          _vm.changeMethod(index)
-        },
-        "dblclick": function($event) {
-          _vm.doubleClick($event)
-        }
-      }
-    }, [_vm._v("\n            " + _vm._s(k) + "\n        ")])
-  }), _vm._v(" "), _c('a', {
-    staticClass: "method-btn more-add",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("+")])], 2), _vm._v(" "), _c('div', {
-    staticClass: "route-edit-main"
-  }, _vm._l((_vm.tabItem.tabs), function(k, index) {
-    return _c('router-editor', {
-      attrs: {
-        "item": _vm.tabItem,
-        "tab-index": index,
-        "current-method": _vm.currentMethod
-      }
-    })
-  }))])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (true) {
-  module.hot.accept()
-  if (module.hot.data) {
-     __webpack_require__(0).rerender("data-v-d9a18abe", module.exports)
   }
 }
 
@@ -12601,7 +12588,7 @@ var content = __webpack_require__(12);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("86a39230", content, false);
+var update = __webpack_require__(4)("22d22f66", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -12627,7 +12614,7 @@ var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("08fc72f5", content, false);
+var update = __webpack_require__(4)("86a39230", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -12653,7 +12640,7 @@ var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("23c9e580", content, false);
+var update = __webpack_require__(4)("08fc72f5", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -12679,7 +12666,7 @@ var content = __webpack_require__(15);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(4)("7e127416", content, false);
+var update = __webpack_require__(4)("23c9e580", content, false);
 // Hot Module Replacement
 if(true) {
  // When the styles change, update the <style> tags
@@ -12891,228 +12878,48 @@ module.exports = [
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports =  [{
+module.exports =  [
+                    // {
+                    //     id:111,
+                    //     title:"router：/",
+                    //     tabs : [
+                    //         {
+                    //             title : "Configure",
+                    //             subs : [{
+                    //                 title : "Router Config"
+                    //             }]
+                    //         }],
+                    //     titleTabs : [
+                    //         "GET" 
+                    //     ]
+                    // },
+                    {
                         id:111,
                         title:"router：/",
-                        tabs : [
-                            {
-                                title : "Home",
-                                subs : []
-                            },
-                            {
+                        methodTabs : [{
+                            method : "GET",
+                            grounds : [{
                                 title : "Configure",
                                 subs : [{
                                     title : "Router Config"
+                                },{
+                                    title : "Base Config"
+                                },{
+                                    title : "Router Config"
                                 }]
-                            },
-                            {
+                            },{
                                 title : "Client",
                                 subs : [{
-                                    title : "ClientTest"
-                                },{
-                                    title : "Input"
-                                },{
-                                    title : "Output"
-                                },{
-                                    title : "ClientMock"
-                                }]
-                            },
-                            {
-                                title : "Transition",
-                                subs : [{
-                                    title : "Transition"
-                                }]
-                            },
-                            {
-                                title : "Service",
-                                subs : [{
-                                    title : "ServiceTest"
-                                },{
                                     title : "Request"
                                 },{
-                                    title : "Receive"
+                                    title : "Response"
+                                },{
+                                    title : "Client Mock"
                                 }]
-                            },
-                            {
-                                title : "Help",
-                                subs : []
-                            }],
-                        titleTabs : [
-                            "GET" 
-                        ]
-                    },{
-                        id:222,
-                        title:"router：/user",
-                        tabs : [
-                            {
-                                title : "Configure",
-                                subs : []
-                            },
-                            {
-                                title : "Client",
-                                subs : [{
-                                    title : "ClientTest"
-                                },{
-                                    title : "Input"
-                                },{
-                                    title : "Output"
-                                },{
-                                    title : "ClientMock"
-                                }]
-                            },
-                            {
-                                title : "Transition",
-                                subs : [{
-                                    title : "Transition"
-                                }]
-                            },
-                            {
-                                title : "Service",
-                                subs : [{
-                                    title : "ServiceTest"
-                                },{
-                                    title : "Request"
-                                },{
-                                    title : "Receive"
-                                }]
-                            },
-                            {
-                                title : "Help",
-                                subs : []
-                            }],
-                            titleTabs : [
-                                "GET" , "PUT" , "DELETE"
-                            ]
-                    },{
-                        id:333,
-                        title:"router：/user/{id}",
-                        tabs : [
-                            {
-                                title : "Configure",
-                                subs : []
-                            },
-                            {
-                                title : "Client",
-                                subs : [{
-                                    title : "ClientTest"
-                                },{
-                                    title : "Input"
-                                },{
-                                    title : "Output"
-                                },{
-                                    title : "ClientMock"
-                                }]
-                            },
-                            {
-                                title : "Transition",
-                                subs : [{
-                                    title : "Transition"
-                                }]
-                            },
-                            {
-                                title : "Service",
-                                subs : [{
-                                    title : "ServiceTest"
-                                },{
-                                    title : "Request"
-                                },{
-                                    title : "Receive"
-                                }]
-                            },
-                            {
-                                title : "Help",
-                                subs : []
-                            }],
-                            titleTabs : [
-                                "GET" 
-                            ]
-                    },{
-                        id:444,
-                        title:"router：/router",
-                        tabs : [
-                            {
-                                title : "Configure",
-                                subs : []
-                            },
-                            {
-                                title : "Client",
-                                subs : [{
-                                    title : "ClientTest"
-                                },{
-                                    title : "Input"
-                                },{
-                                    title : "Output"
-                                },{
-                                    title : "ClientMock"
-                                }]
-                            },
-                            {
-                                title : "Transition",
-                                subs : [{
-                                    title : "Transition"
-                                }]
-                            },
-                            {
-                                title : "Service",
-                                subs : [{
-                                    title : "ServiceTest"
-                                },{
-                                    title : "Request"
-                                },{
-                                    title : "Receive"
-                                }]
-                            },
-                            {
-                                title : "Help",
-                                subs : []
-                            }],
-                            titleTabs : [
-                                "GET" 
-                            ]
-                    },{
-                        id:555,
-                        title:"router：/document",
-                        tabs : [
-                            {
-                                title : "Configure",
-                                subs : []
-                            },
-                            {
-                                title : "Client",
-                                subs : [{
-                                    title : "ClientTest"
-                                },{
-                                    title : "Input"
-                                },{
-                                    title : "Output"
-                                },{
-                                    title : "ClientMock"
-                                }]
-                            },
-                            {
-                                title : "Transition",
-                                subs : [{
-                                    title : "Transition"
-                                }]
-                            },
-                            {
-                                title : "Service",
-                                subs : [{
-                                    title : "ServiceTest"
-                                },{
-                                    title : "Request"
-                                },{
-                                    title : "Receive"
-                                }]
-                            },
-                            {
-                                title : "Help",
-                                subs : []
-                            }],
-                            titleTabs : [
-                                "GET" , "POST"
-                            ]
-                    }]
+                            }]
+                        }]
+                    }
+                ]
 
 /***/ }),
 /* 77 */

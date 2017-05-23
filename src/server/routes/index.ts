@@ -1,17 +1,10 @@
-/// <reference path="../_all.d.ts" />
 "use strict";
+import * as BaseRoute from "../../core/route";
 
-import * as express from "express";
+namespace Route{
 
-module Route {
-
-  export class Index {
-
-    public index(req: express.Request, res: express.Response, next: express.NextFunction) {
-      //render page
-      res.render("index");
-    }
+  export class Default  extends BaseRoute {
   }
 }
-
+ 
 export = Route;

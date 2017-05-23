@@ -1,25 +1,21 @@
 <template>
         <div class="route-editor" :class="{'hide': currentMethod!=tabIndex }">
-            <div class="work-space" 
-                 :class="{'hide': currentEdit!=index }"
-                 v-for = "(k , index) in item.tabs">
-                <div class='work-main' 
-                     :class="{ 'hide' : i !== currentSub[index] }"
-                     v-for="(sub, i) in k.subs">
-                    <div class="editor-title">{{sub.title}}</div>
+            <div class="work-space" >
+                <div class='work-main'>
+                    <div class="editor-title">&nbsp;&gt;&nbsp;&nbsp;{{currentEditTitle}}</div>
                     <div class="editor">
                     </div>
                 </div>
             </div>
             <div class="edit-title">
                 <ul>
-                    <li v-for = "(k , index) in item.tabs"
+                    <li v-for = "(k , index) in item.grounds"
                         :class = "{'first':index===0 , 'active':currentEdit===index , 'cur':k.subs.length===0}"
                     >
                         <a @click = "changeTab(index)" href="javascript:;"><i></i>{{k.title}}</a>
                         <ol class="sub-items">
-                            <li v-for="(sub, i) in k.subs" :class="{ 'cur' :i===currentSub[index] }">
-                                <a href="javascript:;" @click="changeSubTab(index , i)"><i>&nbsp;</i>{{sub.title}}</a>
+                            <li v-for="(sub, i) in k.subs" :class="{ 'cur' :i===currentSub[index] , 'edit-background' : i===currentSub[index]  }">
+                                <a href="javascript:;" @click="changeSubTab(index , i , sub)"><i>&nbsp;</i>{{sub.title}}</a>
                             </li>
                         </ol>
                     </li>
@@ -34,9 +30,10 @@
        data (){
            return {
                currentEdit : 0,
+               currentEditTitle : "",
                currentSub : function( tabs ){
                     var re = [];
-                    for(var i = 0 ; i < tabs.tabs.length ; i++ ){
+                    for(var i = 0 ; i < tabs.grounds.length ; i++ ){
                         re[i] = 0 ;
                     }
                     return re;
@@ -58,8 +55,9 @@
            });
        },
        methods : {
-            changeSubTab( index , i ){
+            changeSubTab( index , i , sub){
                 this.$set( this.currentSub , index , i);
+                this.currentEditTitle = this.item.grounds[this.currentEdit].title + "  >  " + sub.title;
             },
             changeTab( index ){
                 this.$data.currentEdit = index;

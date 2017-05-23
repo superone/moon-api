@@ -4,6 +4,7 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
 import * as path from "path";
+import * as fs from "fs";
 
 import * as Server from "../core/server";
 import * as indexRoute from "./routes/index";
@@ -13,16 +14,29 @@ import * as indexRoute from "./routes/index";
  *
  * @class Server
  */
-class UserServer extends Server {
+class userServer extends Server {
+
+  //public app: express.Application;
+  constructor(){
+      super();
+  }
 
   /**
-   * Constructor.
+   * Bootstrap the application.
    *
    * @class Server
-   * @constructor
+   * @method bootstrap
+   * @static
    */
-  constructor() {
-      super();
+  public static bootstrap(): userServer {
+    return new userServer();
+  }
+
+  public getRootPath() : string{
+
+    let sysconfig : any = this.getConfig();
+    return sysconfig["server-route"];
+
   }
 
   /**
@@ -32,9 +46,9 @@ class UserServer extends Server {
    * @method config
    * @return void
    */
-  private config() {
+  private initConfig() : void {
     //configure jade
-    this.app.set("views", path.join(__dirname, "views"));
+    this.app.set("views", path.join(__dirname, "../../resources/userviews"));
     this.app.set("view engine", "jade");
 
     //mount logger
@@ -47,8 +61,7 @@ class UserServer extends Server {
     this.app.use(bodyParser.urlencoded({ extended: true }));
 
     //add static paths
-    this.app.use(express.static(path.join(__dirname, "public")));
-    this.app.use(express.static(path.join(__dirname, "bower_components")));
+    this.app.use(express.static(path.join(__dirname, "../../public")));
 
     // catch 404 and forward to error handler
     this.app.use(function(err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
@@ -65,21 +78,22 @@ class UserServer extends Server {
    * @method routes
    * @return void
    */
-   private routes() {
+  private routes() : void {
     //get router
     let router: express.Router;
     router = express.Router();
 
     //create routes
-    var index: indexRoute.Index = new indexRoute.Index();
+    var index: indexRoute.Default = new indexRoute.Default( this );
 
     //home page
-    router.get("/", index.index.bind(index.index));
+    router.use("*", index.default.bind(index));
 
     //use router middleware
     this.app.use(router);
   }
 }
 
-var server = Server.bootstrap();
+var server = userServer.bootstrap();
+
 export = server.app;

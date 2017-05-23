@@ -1,0 +1,126 @@
+.page-navigation-main {
+  padding: 12px 15px;
+}
+.page-navigation-main a:hover {
+  text-decoration: underline;
+}
+.page-navigation-main a,
+.page-navigation-main span {
+  margin-right: 5px;
+}
+.orders-list-main {
+  padding: 10px 15px;
+}
+.orders-list-main .list-box {
+  border: 1px solid #eee;
+}
+.orders-list-main .list-box .box-header {
+  line-height: 35px;
+  border-bottom: 1px solid #eee;
+}
+.orders-list-main .list-box .box-header li {
+  text-align: right;
+  padding: 0 5px;
+}
+.orders-list-main .list-box .box-header li input {
+  border: 1px solid #ddd;
+  margin-left: 8px;
+  height: 25px;
+  vertical-align: middle;
+}
+.orders-list-main .list-box .box-header li input:focus {
+  outline: none;
+}
+.orders-list-main .list-box .box-header li label {
+  margin-left: 10px;
+  display: inline-block;
+}
+.orders-list-main .list-box .box-header li label span {
+  display: inline-block;
+  width: 50px;
+}
+.orders-list-main .list-box .box-header li label a {
+  display: inline-block;
+  line-height: 16px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  padding: 0 10px;
+  height: 22px;
+  background-image: -ms-linear-gradient(top, #ffffff, #efefef);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef')";
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#efefef));
+  border-radius: 3px;
+  margin-left: 2px;
+}
+.orders-list-main .list-box .box-header li label a:hover {
+  background-image: -ms-linear-gradient(top, #efefef, #ffffff);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#ffffff')";
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#ffffff));
+}
+.orders-list-main .list-box .box-header li label .search-btn {
+  padding: 0 12px;
+  line-height: 21px;
+}
+.orders-list-main .list-box .box-list {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+}
+.orders-list-main .list-box .box-list > li {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 15px 8px;
+}
+.orders-list-main .list-box .box-list .item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+.orders-list-main .list-box .box-list .list-item {
+  position: relative;
+  margin-right: 150px;
+}
+.orders-list-main .list-box .box-list .list-item .sub li {
+  line-height: 25px;
+  padding: 0 3px;
+}
+.orders-list-main .list-box .box-list .list-item .td-number {
+  position: relative;
+}
+.orders-list-main .list-box .box-list .list-item .li-number {
+  font-weight: bold;
+}
+.orders-list-main .list-box .box-list .list-item .li-content {
+  position: relative;
+}
+.orders-list-main .list-box .box-list .list-item .li-content span {
+  display: inline-block;
+  margin-right: 15px;
+  background: #eee;
+  border-radius: 5px;
+  line-height: 18px;
+  padding: 5px 10px;
+  color: #aaa;
+  margin-top: 5px;
+}
+.orders-list-main .list-box .box-list .list-item .li-content .title {
+  font-weight: bold;
+}
+.orders-list-main .list-box .box-list .item-desc {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 150px;
+}
+.orders-list-main .list-box .box-list .item-desc span {
+  display: block;
+  line-height: 22px;
+  text-align: center;
+}
+.orders-list-main .list-box .box-list .item-desc .order-status {
+  color: red;
+}
+.orders-list-main .list-box .box-list .item-desc .refund {
+  color: #78C3E1;
+}

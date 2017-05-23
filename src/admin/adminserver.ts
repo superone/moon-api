@@ -16,20 +16,18 @@ import * as indexRoute from "./routes/index";
  */
 class adminServer extends Server {
 
-  public app: express.Application;
-
-  private config : any;
+  //public app: express.Application;
 
   constructor(){
 
       super();
 
-      if( !this.loadSysconfig() ){
+      // if( !this.loadSysconfig() ){
 
-          console.log("Can't load the config file in admin server");
-          process.exit(1); 
+      //     console.log("Can't load the config file in admin server");
+      //     process.exit(1); 
 
-      }
+      // }
 
   }
 
@@ -42,6 +40,14 @@ class adminServer extends Server {
    */
   public static bootstrap(): adminServer {
     return new adminServer();
+  }
+
+  public getRootPath() : string{
+
+    let sysconfig : any = this.getConfig();
+
+    return sysconfig["admin-route"];
+
   }
 
   /**
@@ -98,29 +104,29 @@ class adminServer extends Server {
     this.app.use(router);
   }
 
-  public getConfig () : any {
+  // public getConfig () : any {
 
-      return this.config;
+  //     return this.config;
 
-  }
+  // }
 
-  private loadSysconfig() : boolean{
+  // private loadSysconfig() : boolean{
 
-        let loadPath = path.join( process.cwd() , "moon.config.json");
-        let exists = fs.existsSync( loadPath );
-        if(exists){
-            try{
-              let data = fs.readFileSync( loadPath , "utf-8");
-              this.config = JSON.parse(data);
-            }catch(e){
-                console.log("Unknow the config file");
-                return false;
-            }
-            return true;
-        }else{
-            return false;
-        }
-  }
+  //       let loadPath = path.join( process.cwd() , "moon.config.json");
+  //       let exists = fs.existsSync( loadPath );
+  //       if(exists){
+  //           try{
+  //             let data = fs.readFileSync( loadPath , "utf-8");
+  //             this.config = JSON.parse(data);
+  //           }catch(e){
+  //               console.log("Unknow the config file");
+  //               return false;
+  //           }
+  //           return true;
+  //       }else{
+  //           return false;
+  //       }
+  // }
 }
 
 var server = adminServer.bootstrap();

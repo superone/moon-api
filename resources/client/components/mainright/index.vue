@@ -23,24 +23,25 @@
                     </li>
                 </ul>
             </div>
-            <sub-com  v-for="(item , index) in coms" 
+            <router-panel  v-for="(item , index) in coms" 
                       v-bind:is-full="isFull" 
-                      v-bind:tab-item="item"
+                      v-bind:router-data="item"
                       v-bind:current-router="currentRouter"
                       v-bind:router-index="index"
                       @on-isfull-change="onChangeFull"  >
-            </sub-com>
+            </router-panel>
         </div>
     </div>
 </template>
 
 <script>
-    import * as subCom from "./sub";
+    //import * as subCom from "./sub";
+    import * as routerPanel from "./routerPanel";
     import * as menuData from "./data/menuData.js"
 
     export default Vue.extend({        
         components:{
-            subCom
+            routerPanel
         },
         data () {
             return {

@@ -1,0 +1,135 @@
+    .page-navigation-main{
+        padding:12px 15px;
+        a:hover{
+            text-decoration:underline;
+        }
+        a,span{
+            margin-right:5px;
+        }
+    }
+ 
+    .orders-list-main{
+        padding:10px 15px;
+        .list-box{
+            border:1px solid #eee;
+            //height:500px;
+            .box-header{
+                line-height:35px;
+                border-bottom:1px solid #eee;
+                li{
+                    //line-height:25px;
+                    text-align:right;
+                    padding:0 5px;
+                    input{
+                        border:1px solid #ddd;
+                        margin-left:8px;
+                        height:25px;
+                            vertical-align: middle;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    label{
+                        margin-left:10px;
+                        display:inline-block;
+                        span{
+                            display:inline-block;
+                            width:50px;
+                        }
+                        a{
+                            display:inline-block;
+                            line-height:16px;
+                            border:1px solid #ccc;
+                            vertical-align: middle;
+                            padding:0 10px;
+                            height:22px;
+                            background-image: -ms-linear-gradient(top, #ffffff, #efefef);
+                            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efefef')";
+                            background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#efefef));
+                            border-radius: 3px;
+                            margin-left:2px;
+                        }
+                        a:hover{
+                            background-image: -ms-linear-gradient(top, #efefef, #ffffff);
+                            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#ffffff')";
+                            background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#ffffff));
+                        }
+                        .search-btn{
+                            padding:0 12px;
+                            line-height:21px;
+                        }
+                    }
+                }
+            }
+            .box-list{
+                position:relative;
+                clear:both;
+                overflow:hidden;
+                >li{
+                    position:relative;
+                    border-bottom:1px solid #eee;
+                    padding: 15px 8px;
+                }
+                .item{
+                    position:relative;
+                    box-sizing: border-box;
+                    padding:20px 10px;
+                    overflow:hidden;
+                    //float:left;
+                }
+                .list-item{
+                    //float:left;
+                    position:relative;
+                    margin-right:150px;
+                    .sub{
+                        //float:left;
+                        li{
+                            line-height:25px;
+                            padding:0 3px;
+                        }
+                    }
+                    .td-number{
+                        position:relative;
+                    }
+                    .li-number{
+                        //padding:0 8px;
+                        font-weight:bold;
+                    }
+                    .li-content{
+                        position:relative;
+                        span{
+                            display:inline-block;
+                            margin-right:15px;
+                            background:#eee;
+                            border-radius: 5px;
+                            line-height:18px;
+                            padding:5px 10px;
+                            color:#aaa;
+                            margin-top:5px;
+                        }
+                        .title{
+                            font-weight:bold;
+                        }
+                    }
+                }
+                .item-desc{
+                    position:absolute;
+                    top:0px;
+                    right:0px;
+                    width:150px;
+                    //background:red;
+                    span{
+                        display:block;
+                        line-height:22px;
+                        text-align:center;
+                    }
+                    .order-status{
+                        color:red;
+                    }
+                    .refund{
+                        color:#78C3E1;
+                    }
+                }
+            }
+        }
+    }

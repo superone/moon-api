@@ -226,23 +226,21 @@ li {
   top: 0px;
   left: 0px;
   bottom: 0px;
-  right: 140px;
-  border-left: 1px solid #647179;
-  border-bottom: 1px solid #647179;
-  padding: 10px;
+  right: 160px;
+  border-left: 1px solid #45484a;
+  border-bottom: 1px solid #45484a;
 }
 .code-right div.cont .edit-space .route-edit-main .work-space .work-main {
   position: relative;
-  border: 1px solid #2e2f29;
   width: 100%;
   height: 100%;
 }
 .code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor-title {
   height: 30px;
   line-height: 30px;
-  background: #2e2f29;
   padding: 0 10px;
   box-sizing: border-box;
+  color: #6d6a6a;
 }
 .code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor {
   position: absolute;
@@ -264,9 +262,9 @@ li {
   position: relative;
   float: right;
   height: 100%;
-  width: 140px;
+  width: 160px;
   background: #333333;
-  border-left: 1px solid #647179;
+  border-left: 1px solid #45484a;
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title ul > li {
   font-size: 15px;
@@ -297,7 +295,7 @@ li {
 .code-right div.cont .edit-space .route-edit-main .edit-title .active {
   position: relative;
   left: -1px;
-  border: 1px solid #647179;
+  border: 1px solid #45484a;
   background: #272822;
   border-left: none;
 }
@@ -331,7 +329,6 @@ li {
 }
 .code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur {
   position: relative;
-  left: -8px;
   background: #1d1e1a;
   border: 1px solid #2e2f29;
   border-left: none;
@@ -347,7 +344,7 @@ li {
 .code-right div.cont .edit-space .route-edit-main .edit-title li.cur.active {
   position: relative;
   left: -1px;
-  border: 1px solid #647179;
+  border: 1px solid #45484a;
   background: #272822;
   border-left: none;
 }
@@ -359,7 +356,7 @@ li {
   position: relative;
   padding: 2px 0px 0 10px;
   background: #333333;
-  border-bottom: 1px solid #647179;
+  border-bottom: 1px solid #45484a;
 }
 .code-right div.cont .edit-space .method-tab .method-btn {
   display: inline-block;
@@ -379,7 +376,7 @@ li {
   z-index: 1;
   background: #272822;
   color: #ffffff;
-  border: 1px solid #647179;
+  border: 1px solid #45484a;
   top: 1px;
   border-bottom: 1px solid #272822;
 }
@@ -493,4 +490,15 @@ li {
   height: 25px;
   background: rgba(176, 176, 176, 0.98);
   border-top: 1px solid #2b2b2b;
+}
+.CodeMirror-vscrollbar::-webkit-file-upload-button,
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  min-height: 20px;
+  background-clip: content-box;
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.3) inset;
+}
+.CodeMirror {
+  font-family: monospace;
+  height: 100%;
+  color: black;
 }

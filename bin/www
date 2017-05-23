@@ -3,17 +3,22 @@
 //console.log(process.cwd());
 //module dependencies.
 var app = require("../app/admin/adminserver");
+var userapp = require("../app/server/userserver");
+
 var debug = require("debug")("express:server");
 var http = require("http");
 
+
+//admin server
 //get port from environment and store in Express.
 var port = normalizePort(process.env.PORT || 8899);
-console.log(port);
-app.set("port", port);
+
+app.set( "port", port );
 
 
 //create http server
 var server = http.createServer(app);
+var userserver = http.createServer(userapp);
 
 //listen on provided ports
 server.listen(port);
@@ -24,6 +29,25 @@ server.on("error", onError);
 //start listening on port
 server.on("listening", onListening);
 
+
+
+
+
+//user server
+//get port from environment and store in Express.
+userapp.set("port" , 8080 );
+
+//create http server
+var userserver = http.createServer(userapp);
+
+//listen on provided ports
+userserver.listen(8080);
+
+//add error handler
+userserver.on("error", onError);
+
+//start listening on port
+userserver.on("listening", onListening);
 
 /**
  * Normalize a port into a number, string, or false.

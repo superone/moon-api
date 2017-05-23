@@ -23,10 +23,10 @@ function getDirNode(){
     }
 }
 
+var filesArr = [];
 if(fs.existsSync( ROOT )){
     var dir = fs.readdirSync( ROOT );
     //dir.map
-    var filesArr = [];
 	(function dir(dirpath, fn) {
 		var files = fs.readdirSync(dirpath);
 		async(files, function (item, next) {
