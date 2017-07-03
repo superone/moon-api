@@ -78,7 +78,7 @@
                         top:-2px;
                         display:inline-block;
                         width:12px;height:12px;
-                        background:url(../images/jia.png)no-repeat;
+                        background:url(../images/jia.png) no-repeat;
                         background-size:12px 12px;
                         vertical-align: middle;
                     }
@@ -95,18 +95,37 @@
                             color:#3894dc;
                             text-decoration:none;
                         }
+                        .GET{
+                            color:#FF5722;
+                        }
+                        .POST{
+                            color:#FFC107;
+                        }
+                        .UPDATE{
+                            color:#a96be6;
+                        }
+                        .ALL{
+                            color:#0eff00;
+                        }
+                        .DELETE{
+                            color:red;
+                        }
                     }
                     .jian{
                         background:url(../images/jian.png)no-repeat;
                         background-size:12px 12px;
                     }
+                    .node-icon.route{
+                        background:url(../images/link.png)no-repeat;
+                    }
                     > ul > li{
                         position:relative;
+                        padding-left: 11px;
                         .active{
                             background:#1c3a52;
                         }
                         > .tree-node{
-                            margin-left:22px;
+                            margin-left:9px;
                         }
                         span{
                             position:relative;
@@ -130,11 +149,21 @@
                     > ul > li >span:not(.active):hover{
                         background:#121111;
                     }
+                    > ul > li::before{
+                        display: inline-block;
+                        width: 10px;
+                        height: 0px;
+                        border-top: 1px dashed #777777;
+                        content: "";
+                        position: absolute;
+                        top: 12px;
+                        left: 3px;
+                    }
                     > .tree-line{
                         width:12px;
                         position: absolute;
                         top:26px;
-                        left:12px;
+                        left: 21px;
                         bottom:12px;
                         border-left:1px dashed #777777;
                         border-bottom:1px dashed #777777;
@@ -153,6 +182,12 @@
                         /* display: inline-block; */
                         top: 0px;
                         //background: #1b1b1b;
+                    }
+                }
+                >.tree-node{
+                    left: -11px;
+                    > ul > li::before{
+                        content:none;
                     }
                 }
             }

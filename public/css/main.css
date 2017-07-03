@@ -94,18 +94,37 @@
   color: #3894dc;
   text-decoration: none;
 }
+.page-main .code-left .tree .tree-cont .tree-node .node-name .GET {
+  color: #FF5722;
+}
+.page-main .code-left .tree .tree-cont .tree-node .node-name .POST {
+  color: #FFC107;
+}
+.page-main .code-left .tree .tree-cont .tree-node .node-name .UPDATE {
+  color: #a96be6;
+}
+.page-main .code-left .tree .tree-cont .tree-node .node-name .ALL {
+  color: #0eff00;
+}
+.page-main .code-left .tree .tree-cont .tree-node .node-name .DELETE {
+  color: red;
+}
 .page-main .code-left .tree .tree-cont .tree-node .jian {
   background: url(../images/jian.png) no-repeat;
   background-size: 12px 12px;
 }
+.page-main .code-left .tree .tree-cont .tree-node .node-icon.route {
+  background: url(../images/link.png) no-repeat;
+}
 .page-main .code-left .tree .tree-cont .tree-node > ul > li {
   position: relative;
+  padding-left: 11px;
 }
 .page-main .code-left .tree .tree-cont .tree-node > ul > li .active {
   background: #1c3a52;
 }
 .page-main .code-left .tree .tree-cont .tree-node > ul > li > .tree-node {
-  margin-left: 22px;
+  margin-left: 9px;
 }
 .page-main .code-left .tree .tree-cont .tree-node > ul > li span {
   position: relative;
@@ -128,11 +147,21 @@
 .page-main .code-left .tree .tree-cont .tree-node > ul > li > span:not(.active):hover {
   background: #121111;
 }
+.page-main .code-left .tree .tree-cont .tree-node > ul > li::before {
+  display: inline-block;
+  width: 10px;
+  height: 0px;
+  border-top: 1px dashed #777777;
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 3px;
+}
 .page-main .code-left .tree .tree-cont .tree-node > .tree-line {
   width: 12px;
   position: absolute;
   top: 26px;
-  left: 12px;
+  left: 21px;
   bottom: 12px;
   border-left: 1px dashed #777777;
   border-bottom: 1px dashed #777777;
@@ -150,6 +179,12 @@
   height: 23px;
   /* display: inline-block; */
   top: 0px;
+}
+.page-main .code-left .tree .tree-cont > .tree-node {
+  left: -11px;
+}
+.page-main .code-left .tree .tree-cont > .tree-node > ul > li::before {
+  content: none;
 }
 .page-main .code-left .card-bar {
   position: absolute;

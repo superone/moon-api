@@ -50,6 +50,18 @@ class adminServer extends Server {
     return sysconfig["admin-route"];
 
   }
+  //overwrite
+  public getUserRootPath () : string{
+
+    let sysconfig : any = this.getConfig();
+    let rootpath : string = path.join( process.cwd() , sysconfig['moonspace']);
+    let usrpath = sysconfig["server-route"];
+
+    usrpath = path.join( "" , usrpath.replace("{space}", rootpath) );
+
+    return usrpath;
+
+  }
 
   public getPort():number {
     var config = this.getConfig();
@@ -126,6 +138,7 @@ class adminServer extends Server {
     //use router middleware
     this.app.use(router);
   }
+
 }
 
 var server = adminServer.bootstrap();

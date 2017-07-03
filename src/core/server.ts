@@ -77,6 +77,10 @@ class Server {
     return "";
   }
 
+  public getUserRootPath () : string{
+    return "";
+  }
+
   private loadSysconfig() : boolean{
 
         let loadPath = path.join( process.cwd() , "moon.config.json");

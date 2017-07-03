@@ -1,0 +1,1 @@
+RES.render("test" , { "title" : "MoonApi"} );

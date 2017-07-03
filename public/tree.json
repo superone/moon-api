@@ -1,73 +1,181 @@
 [
-                    {
-                        "nodeId" : 1,
-                        "menuName" : "/(root)",
-                        "route" : "/",
-                        "routeType" : "view:html",
-                        "requestType" : "get",
-                        "child" : [
-                            {
-                                "nodeId" : 2,
-                                "menuName" : "用户中心",
-                                "route" : "/user",
-                                "routeType" : "view:html",
-                                "requestType" : "get",
-                                "child" : [
-                                    {
-                                        "nodeId" : 3,
-                                        "menuName" : "获取用户信息",
-                                        "route" : "/userinfo",
-                                        "routeType" : "restFull:get",
-                                        "requestType" : "get",
-                                        "child" :[
-                                                {
-                                                    "nodeId" : 31,
-                                                    "menuName" : "获取用户信息S",
-                                                    "route" : "/usersub",
-                                                    "routeType" : "restFull:get",
-                                                    "requestType" : "get",
-                                                    "child" :[
-                                                        {
-                                                            "nodeId" : 311,
-                                                            "menuName" : "获取用户信息SS",
-                                                            "route" : "/usersubS",
-                                                            "routeType" : "restFull:get",
-                                                            "requestType" : "get",
-                                                            "child" :[
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                        ]
-                                    },
-                                    {
-                                        "nodeId" : 4,
-                                        "menuName" : "更新用户信息",
-                                        "route" : "/userinfo",
-                                        "routeType" : "restFull:post",
-                                        "requestType" : "post",
-                                        "child" :[
-                                            
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                "nodeId" : 21,
-                                "menuName" : "支付接口",
-                                "route" : "/pay",
-                                "routeType" : "view:html",
-                                "requestType" : "get",
-                                "child" : []
-                            },
-                            {
-                                "nodeId" : 22,
-                                "menuName" : "搜索接口",
-                                "route" : "/search",
-                                "routeType" : "view:html",
-                                "requestType" : "get",
-                                "child" : []
-                            }
-                        ]
-                    }
-                ]
+    {
+        "nodeId" : 1,
+        "menuName" : "root",
+        "route" : "/",
+        "routeType" : "view:html",
+        "requestType" : "",
+        "child" : [
+                {
+                    "nodeId" : 3,
+                    "menuName" : "首页视图",
+                    "route" : "",
+                    "routeType" : "view:html",
+                    "requestType" : "GET"
+                },
+                {
+                    "nodeId" : 2,
+                    "menuName" : "用户中心",
+                    "route" : "/user",
+                    "routeType" : "view:html",
+                    "requestType" : "",
+                    "child":[
+                        {
+                            "nodeId" : 7,
+                            "menuName" : "用户中心视图",
+                            "route" : "",
+                            "routeType" : "view:html",
+                            "requestType" : "GET"
+                        },
+                        {
+                            "nodeId" : 8,
+                            "menuName" : "用户相关",
+                            "route" : "/{user_id}",
+                            "routeType" : "",
+                            "requestType" : "",
+                            "child" : [
+                                {
+                                    "nodeId" : 86,
+                                    "menuName" : "公共处理",
+                                    "route" : "",
+                                    "routeType" : "",
+                                    "requestType" : "ALL"
+                                },
+                                {
+                                    "nodeId" : 85,
+                                    "menuName" : "获取用户信息",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "GET"
+                                },
+                                {
+                                    "nodeId" : 82,
+                                    "menuName" : "新增用户",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "POST"
+                                },
+                                {
+                                    "nodeId" : 83,
+                                    "menuName" : "更新用户",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "UPDATE"
+                                },
+                                {
+                                    "nodeId" : 81,
+                                    "menuName" : "删除用户",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "DELETE"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeId" : 10,
+                            "menuName" : "用户中心",
+                            "route" : "/center",
+                            "routeType" : "view:html",
+                            "requestType" : "",
+                            "child":[
+                                {
+                                    "nodeId" : 11,
+                                    "menuName" : "用户中心首页",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "GET"
+                                }
+                            ]   
+                        },
+                        {
+                            "nodeId" : 12,
+                            "menuName" : "用户列表",
+                            "route" : "/list",
+                            "routeType" : "",
+                            "requestType" : "",
+                            "child":[
+                                {
+                                    "nodeId" : 121,
+                                    "menuName" : "用户列表视图",
+                                    "route" : "",
+                                    "routeType" : "view:html",
+                                    "requestType" : "GET"
+                                }
+                            ]   
+                        }
+                    ]
+                },
+                {
+                    "nodeId" : 20,
+                    "menuName" : "文档",
+                    "route" : "/document",
+                    "routeType" : "",
+                    "requestType" : "",
+                    "child":[
+                        {
+                            "nodeId" : 22,
+                            "menuName" : "文档中心",
+                            "route" : "",
+                            "routeType" : "view:html",
+                            "requestType" : "GET"
+                        },
+                        {
+                            "nodeId" : 21,
+                            "menuName" : "文档操作",
+                            "route" : "/{document_id}",
+                            "routeType" : "",
+                            "requestType" : "",
+                            "child":[
+                                {
+                                    "nodeId" : 23,
+                                    "menuName" : "获取文档",
+                                    "route" : "",
+                                    "routeType" : "json",
+                                    "requestType" : "GET"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodeId" : 50,
+                    "menuName" : "搜索引擎",
+                    "route" : "/search",
+                    "routeType" : "view:html",
+                    "requestType" : "",
+                    "child":[
+                        {
+                            "nodeId" : 52,
+                            "menuName" : "公共处理",
+                            "route" : "",
+                            "routeType" : "",
+                            "requestType" : "ALL"
+                        },
+                        {
+                            "nodeId" : 51,
+                            "menuName" : "执行搜索视图",
+                            "route" : "",
+                            "routeType" : "view:html",
+                            "requestType" : "GET"
+                        },
+                        {
+                            "nodeId" : 53,
+                            "menuName" : "ajax搜索",
+                            "route" : "/api",
+                            "routeType" : "json",
+                            "requestType" : "",
+                            "child":[
+                                {
+                                    "nodeId" : 531,
+                                    "menuName" : "执行搜索",
+                                    "route" : "",
+                                    "routeType" : "json",
+                                    "requestType" : "GET"
+                                }
+                            ]
+                        }
+                    ]
+                }
+        ]
+    }
+]

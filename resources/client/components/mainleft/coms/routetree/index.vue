@@ -181,8 +181,8 @@
         methods : {
             loadData : function(){
                 let me = this;
-                $.get("/tree.json" , function( data ){
-                    me.treeData = data;
+                $.get("/route" , function( data ){
+                    me.treeData = JSON.parse(data);
                 });
             },
             onActiveChange( val ){

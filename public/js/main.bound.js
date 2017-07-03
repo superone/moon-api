@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e81aca9c97b4a950ee1c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "487003fc1cced6b42ce1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -9816,7 +9816,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -11320,8 +11320,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods : {
         loadData : function(){
             let me = this;
-            $.get("/tree.json" , function( data ){
-                me.treeData = data;
+            $.get("/route" , function( data ){
+                me.treeData = JSON.parse(data);
             });
         },
         onActiveChange( val ){
@@ -11337,6 +11337,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -11972,7 +11974,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('a', {
     staticClass: "node-icon",
-    class: [_vm.open ? 'jian' : ''],
+    class: {
+      jian: _vm.open, folder: _vm.treeData.method == '', route: _vm.treeData.method != ''
+    },
     attrs: {
       "href": "javascript:;"
     },
@@ -11990,7 +11994,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.selectNode(_vm.treeData)
       }
     }
-  }, [_c('ins', [_vm._v("[" + _vm._s(_vm.treeData.requestType) + "]")]), _vm._v(_vm._s(_vm.treeData.route)), _c('i', [_vm._v("(" + _vm._s(_vm.treeData.menuName) + ")")])])]), _vm._v(" "), _vm._l((_vm.treeData.child), function(item) {
+  }, [_c('ins', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.treeData.method),
+      expression: "treeData.method"
+    }],
+    class: _vm.treeData.method
+  }, [_vm._v(_vm._s(_vm.treeData.method))]), _vm._v("\n                    " + _vm._s(_vm.treeData.route) + "\n                    "), _c('i', [_vm._v("(" + _vm._s(_vm.treeData.menuName) + ")")])])]), _vm._v(" "), _vm._l((_vm.treeData.child), function(item) {
     return _c('items', {
       attrs: {
         "tree-data": item,

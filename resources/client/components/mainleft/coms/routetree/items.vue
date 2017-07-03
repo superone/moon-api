@@ -3,13 +3,15 @@
         <ul>
             <li>
                 <span :class="{active : localActiveNode == treeData.nodeId }">
-                    <a class="node-icon" 
-                        :class="[open?'jian':'']" 
+                    <a  class="node-icon" 
                         href="javascript:;" 
+                        :class="{jian : open , folder : treeData.method == '' , route : treeData.method != '' }" 
                         @click='toggle'>
                     </a>
                     <a class='node-name' @click.stop="selectNode(treeData)"  href='javascript:;'>
-                        <ins>[{{treeData.requestType}}]</ins>{{ treeData.route }}<i>({{ treeData.menuName }})</i>
+                        <ins :class="treeData.method" v-show="treeData.method">{{treeData.method}}</ins>
+                        {{ treeData.route }}
+                        <i>({{ treeData.menuName }})</i>
                     </a>
                 </span>
                 <items v-for="item in treeData.child" @on-active-change="onActiveChange" :tree-data="item" :active-node="activeNode"></items>

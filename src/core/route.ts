@@ -1,3 +1,5 @@
+import { consoleTestResultHandler } from 'tslint/lib/test';
+import { isNestedModuleDeclaration } from 'tslint/lib';
 /// <reference path="../_all.d.ts" />
 "use strict";
 import * as express from "express";
@@ -6,6 +8,9 @@ import * as fs from "fs";
 import * as vm from "vm";
 import * as colors from "colors";
 import * as util from "util";
+
+import * as RouteConfigure from "./route.configure";
+import * as Moon from "./moon";
 
 class Route {
 
@@ -16,10 +21,13 @@ class Route {
 
       public routePath : string;
 
+      private configure : any; 
+
       //init
       constructor( server ){
 
           this.server = server;
+          this.configure = new RouteConfigure( this ); //解析路由配置
           
           if( !this.loadConfig() ){
 
@@ -45,6 +53,11 @@ class Route {
               this.runRoute.apply(this, arguments);
           //}
       }
+
+      public getSortFiles( arr ):any{
+         return this.configure.sortFiles( arr );
+      }
+
       //路由执行
       private runRoute(req: express.Request, res: express.Response, next: express.NextFunction):void{
           
@@ -52,7 +65,7 @@ class Route {
           let reqData  = this.analyseReq(req);
           let method = req.method.toLocaleLowerCase();
           let route = reqData.route ;
-          let reqPath = path.join( this.routePath , route , method + ".js");
+          let reqPath = path.join( this.routePath , route , method + ".js" );
           let filecode : string;
 
           if( fs.existsSync( reqPath ) ){
@@ -66,10 +79,13 @@ class Route {
               const sandbox = {
                   require       :   require,
                   exports       :   exports,
+                  console       :   console,
                   ROOT          :   SYSTEM.ROUTEPATH,
                   RES           :   res,
                   REQ           :   req,
-                  RESPONSE  :   ""
+                  RESPONSE      :   "",
+
+                  moon          :  new Moon( this ,  this.server)
               }
 
               //vm.runInThisContext( "(function(){" + filecode + "})")(require);
