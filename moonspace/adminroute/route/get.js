@@ -19,9 +19,9 @@ function async (arr, callback1, callback2) {
 
 var userRootPath = moon.server.getUserRootPath();
 //console.log(userRootPath);
-var number = 1;
+var number = 0;
 var filesArr = [{
-    "nodeId" : number++,
+    "nodeId" : ++number,
     "menuName" : "/",
     "route" : "/",
     "routeType" : "view:html",
@@ -44,7 +44,7 @@ if(fs.existsSync( userRootPath )){
             //console.log( path.join(dirpath , item) + ":" + info.isDirectory());
             
             var node = {
-                "nodeId" : id++,
+                "nodeId" : ++id,
                 "menuName" : item,
                 "route" : "",
                 "routeType" : "view:html",
@@ -57,7 +57,7 @@ if(fs.existsSync( userRootPath )){
                 //filesArr.push(path.join( dirpath , item) );
                 node.route = "/" + item;
                 nodeArr.push( node );
-				dir(path.join(dirpath , item , '/'), node.child , id , function () {
+				dir(path.join(dirpath , item , '/'), node.child , id*100 , function () {
 					next();
 				});
 			} else {
@@ -76,7 +76,7 @@ if(fs.existsSync( userRootPath )){
 			!err && fn && fn();
 
 		});
-	})( userRootPath , filesArr[0].child , number);
+	})( userRootPath , filesArr[0].child , number*100);
 
 }
 

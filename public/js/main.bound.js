@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "487003fc1cced6b42ce1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c5f1e41c75097c80f8ba"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -11757,7 +11757,7 @@ const pagemain = Vue.extend({
     //router,
     components:{
         mainLeft: __WEBPACK_IMPORTED_MODULE_0__mainleft_index_vue___default.a,
-        mainRight: __WEBPACK_IMPORTED_MODULE_1__mainright_index_vue___default.a
+        //mainRight
     },
     data () {
         return {

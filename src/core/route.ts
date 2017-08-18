@@ -21,7 +21,7 @@ class Route {
 
       public routePath : string;
 
-      private configure : any; 
+      private configure : RouteConfigure; 
 
       //init
       constructor( server ){
@@ -72,6 +72,7 @@ class Route {
               filecode = fs.readFileSync( reqPath , "utf-8");
               //var routefn = require( reqPath );
               var SYSTEM = this.server.getConfig();
+              let moon = new Moon( this ,  this.server);
               //SYSTEM = util.inspect( SYSTEM );
               SYSTEM.rootPath = process.cwd();
               SYSTEM.ROUTEPATH = this.routePath;
@@ -85,7 +86,8 @@ class Route {
                   REQ           :   req,
                   RESPONSE      :   "",
 
-                  moon          :  new Moon( this ,  this.server)
+                  moon          :  moon,
+                  $m            :  moon
               }
 
               //vm.runInThisContext( "(function(){" + filecode + "})")(require);

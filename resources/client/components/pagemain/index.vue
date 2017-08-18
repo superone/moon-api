@@ -13,7 +13,7 @@
         //router,
         components:{
             mainLeft,
-            mainRight
+            //mainRight
         },
         data () {
             return {

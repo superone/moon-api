@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 
+"use strict";
 class RouteConfigure {
 
     private route : any;
