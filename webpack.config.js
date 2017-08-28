@@ -5,6 +5,7 @@
  * */
 var path = require('path');
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [
@@ -27,8 +28,7 @@ module.exports = {
     module: {
         loaders: [//加载器
             {test: /\.html$/, loader: 'raw'},
-            {test: /\.jade/, loader: "jade" },
-            {test: /\.vue/, loader: "vue-loader" },
+            {test: /\.jade$/, loader: "jade" },
             {test: /\.hbs$/, 
                 loader: 'handlebars-loader',
                 query: {
@@ -36,6 +36,13 @@ module.exports = {
                         __dirname + "/resources/client/base/helpers"
                     ]
                 }
+            },
+            {test: /\.vue$/, loader: "vue-loader" },
+            {
+                test: /\.js$/,
+                loader: "babel-loader",
+                query: {presets: ['es2015']},
+                exclude: /node_modules/
             },
             {test: /\.css$/, loader: 'style!css'},
             {test: /\.json/, loader: 'json-loader'},
@@ -48,8 +55,19 @@ module.exports = {
                 loader: 'yaml',
             }
         ]
-    },  
+    },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.LoaderOptionsPlugin({
+            babel: {
+                presets: ['es2015'],
+                plugins: ['transform-runtime']
+            },
+            vue : {
+                loaders: {
+                    js : 'babel-loader'
+                }
+            }
+        })
     ]
 };

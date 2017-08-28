@@ -1,31 +1,23 @@
 <template>
-    <div id="main">
-        <div class="container">
+    <div class="main" id="main">
             <page-header></page-header>
-        </div>
-        <div class="container">
-            <div class="main-content">
+            <div class="main-content clearfl">
+                <left-bar></left-bar>
                 <page-main class="page-main"></page-main>
             </div>
-            <left-bar></left-bar>
-        </div>
-        <div class="container">
-            <page-footer></page-footer>
-        </div>
     </div>
 </template>
 
 <script>
-    import pageHeader from "../components/header/index.vue"
-    import pageFooter from "../components/footer/index.vue"
-    import pageMain from "../components/pagemain/index.vue"
-    import leftBar from "../components/leftbar/index.vue"
+    import pageHeader from "../components/header/index.vue";
+    import pageMain from "../components/pagemain/index.vue";
+    import leftBar from "../components/leftbar/index.vue";
 
     export default Vue.extend({
         components :{
             pageHeader,
             pageMain,
-            pageFooter,
+            //pageFooter,
             leftBar
         },
         data () {

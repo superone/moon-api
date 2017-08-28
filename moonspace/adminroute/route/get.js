@@ -22,7 +22,7 @@ var userRootPath = moon.server.getUserRootPath();
 var number = 0;
 var filesArr = [{
     "nodeId" : ++number,
-    "menuName" : "/",
+    "menuName" : "root",
     "route" : "/",
     "routeType" : "view:html",
     "method" : "",
@@ -53,9 +53,8 @@ if(fs.existsSync( userRootPath )){
 
 			if (info.isDirectory()) {
                 node.child = [];
-
                 //filesArr.push(path.join( dirpath , item) );
-                node.route = "/" + item;
+                node.route = item + "/";
                 nodeArr.push( node );
 				dir(path.join(dirpath , item , '/'), node.child , id*100 , function () {
 					next();

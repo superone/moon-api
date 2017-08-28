@@ -1,19 +1,19 @@
 <template>
     <div class="page-main">
         <main-left></main-left>
-        <main-right></main-right>
+        <main-content></main-content>
     </div>
 </template>
 
 <script>
     import mainLeft from "../mainleft/index.vue"
-    import mainRight from "../mainright/index.vue"
+    import mainContent from "../maincontent/index.vue"
     
     const pagemain = Vue.extend({
         //router,
         components:{
             mainLeft,
-            //mainRight
+            mainContent
         },
         data () {
             return {

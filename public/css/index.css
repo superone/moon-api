@@ -28,14 +28,13 @@ li {
   height: 37px;
 }
 .page-main {
-  position: fixed;
+  position: relative;
   z-index: 20;
-  top: 51px;
-  bottom: 26px;
-  left: 50px;
-  right: 0px;
+  height: 100%;
+  bottom: 0px;
   background: #252526;
   color: #fff;
+  overflow: hidden;
 }
 .page-main .code-edit {
   position: relative;
@@ -54,7 +53,7 @@ li {
   float: left;
 }
 .page-main .code-left > div.cont {
-  background: #252526;
+  background: #202022;
 }
 .page-main .code-left .tree {
   height: 100%;
@@ -63,7 +62,7 @@ li {
 .page-main .code-left .tree .tree-title {
   line-height: 30px;
   padding: 0 10px;
-  background: #333333;
+  background: #2e2e2e;
   border: 1px solid #211d1d;
   color: #b3b6b8;
   font-size: 14px;
@@ -85,11 +84,6 @@ li {
   background-position-y: center;
 }
 .page-main .code-left .tree .tree-cont {
-  position: absolute;
-  top: 32px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
   overflow-y: auto;
   box-sizing: border-box;
   font-size: 13px;
@@ -229,276 +223,35 @@ li {
 .page-main .code-left .card-bar:hover {
   background: #363633;
 }
-.code-right {
+.main-content-right {
+  position: relative;
   box-sizing: border-box;
-  padding: 0 0 0 0px;
-  top: 0px;
+  height: 100%;
   overflow: hidden;
-  border-left: 3px solid #2c2e2e;
 }
-.code-right div.cont {
-  position: relative;
-  background: #272822;
+.clearfl::after {
+  content: "";
+  clear: both;
 }
-.code-right div.cont .edit-space {
-  height: 100%;
-  position: relative;
-}
-.code-right div.cont .edit-space .route-edit-main {
-  position: absolute;
-  top: 33px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  line-height: 30px;
-}
-.code-right div.cont .edit-space .route-edit-main .route-editor {
-  width: 100%;
-  height: 100%;
-}
-.code-right div.cont .edit-space .route-edit-main .work-space {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 160px;
-  border-left: 1px solid #45484a;
-  border-bottom: 1px solid #45484a;
-}
-.code-right div.cont .edit-space .route-edit-main .work-space .work-main {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor-title {
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  color: #6d6a6a;
-}
-.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor {
-  position: absolute;
-  top: 30px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  background: #1d1e1a;
-}
-.code-right div.cont .edit-space .route-edit-main .work-space .work-main .editor textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: none;
-  outline: none;
-  resize: none;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title {
-  position: relative;
-  float: right;
-  height: 100%;
-  width: 160px;
-  background: #333333;
-  border-left: 1px solid #45484a;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title ul > li {
-  font-size: 15px;
-  background: #333333;
-  border: 1px solid #333333;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title ul > li > a {
-  font-size: 15px;
-  display: block;
-  text-align: left;
-  padding: 0 15px;
-  line-height: 45px;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title ul > li > a > i {
-  display: inline-block;
-  vertical-align: middle;
-  width: 28px;
-  height: 28px;
-  background: url(/images/icon/icons.png) no-repeat;
-  background-position: -25px 0px;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title ul > li a:hover {
-  background: #370f0f;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .sub-items {
-  display: none;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active {
-  position: relative;
-  left: -1px;
-  border: 1px solid #45484a;
-  background: #272822;
-  border-left: none;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active > a {
-  color: #fff;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active a:hover {
-  background: none;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items {
-  display: block;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li {
-  line-height: 45px;
-  border: 1px solid #272822;
-  background: #272822;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li a {
-  display: block;
-  font-size: 15px;
-  text-align: center;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li a i {
-  display: none;
-  margin-right: 8px;
-  width: 28px;
-  height: 28px;
-  background: url(/images/icon/icons.png) no-repeat;
-  background-position: -73px 5px;
-  vertical-align: middle;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur {
-  position: relative;
-  background: #1d1e1a;
-  border: 1px solid #2e2f29;
-  border-left: none;
-  margin-bottom: 10px;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur a {
-  color: #ed4848;
-  text-align: left;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .active .sub-items li.cur a i {
-  display: inline-block;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title li.cur.active {
-  position: relative;
-  left: -1px;
-  border: 1px solid #45484a;
-  background: #272822;
-  border-left: none;
-}
-.code-right div.cont .edit-space .route-edit-main .edit-title .first {
-  position: relative;
-  top: -1px;
-}
-.code-right div.cont .edit-space .method-tab {
-  position: relative;
-  padding: 2px 0px 0 10px;
-  background: #333333;
-  border-bottom: 1px solid #45484a;
-}
-.code-right div.cont .edit-space .method-tab .method-btn {
-  display: inline-block;
-  line-height: 28px;
-  padding: 0 20px;
-  border: 1px solid #19354c;
-  color: #fff;
-  background: #05253f;
-  border-bottom: none;
-  margin-right: 5px;
-}
-.code-right div.cont .edit-space .method-tab .method-btn:not(.more-add):not(.active):hover {
-  background: #2e0101;
-}
-.code-right div.cont .edit-space .method-tab .active {
-  position: relative;
-  z-index: 1;
-  background: #272822;
-  color: #ffffff;
-  border: 1px solid #45484a;
-  top: 1px;
-  border-bottom: 1px solid #272822;
-}
-.code-right div.cont .edit-space .method-tab .more-add {
-  position: relative;
-  line-height: 23px;
-  padding: 0 10px;
-  background: #2c2c29;
-  border: 1px solid #23241e;
-  box-shadow: -1px -1px #121212;
-}
-.code-right div.cont .edit-space .method-tab .more-add:hover {
-  box-shadow: 2px 2px #121212;
-}
-.code-right div.cont .tab-select-box {
-  position: absolute;
-  border: 1px solid #333333;
-  right: 145px;
-  top: 2px;
-  z-index: 21;
-}
-.code-right div.cont .tab-select-box li {
-  line-height: 25px;
-  font-size: 14px;
-  text-align: left;
-  padding: 0 20px;
-}
-.code-right div.cont .tab-select-box li a {
-  font-size: 15px;
-}
-.code-right div.cont .tab-select-box .current-edit {
-  border: 1px solid #333333;
-}
-.code-right div.cont .tab-select-box .current-edit a {
-  color: #ddd;
-}
-.code-right div.cont .tab-select-box .edit-select {
-  position: relative;
-  line-height: 30px;
-}
-.code-right div.cont .tab-select-box .edit-select i {
-  position: absolute;
-  left: 3px;
-  top: 2px;
-  color: red;
-  font-size: 16px;
-}
-.code-right div.cont .tab-select-box .edit-select.hide {
-  display: none;
-}
-.code-right div.cont .tab-select-box .showMenu.current-edit {
-  border: 1px solid #032540;
-  background: #051d30;
-}
-.code-right div.cont .tab-select-box .showMenu.edit-select {
-  background: #082135;
-  padding: 0 20px;
-}
-.code-right div.cont .tab-select-box .showMenu.edit-select a {
-  color: #fff;
-}
-.code-right div.cont .tab-select-box .edit-select.active {
-  background: #010f1b;
-}
-.code-right div.cont .tab-select-box .showMenu.edit-select:not(.active):hover {
-  background: #370f0f;
-}
-.code-right div.cont .tab-select-box .showMenu.edit-select:not(.active):hover a {
-  color: #ddd;
-}
-.code-right div.cont .tab-select-box.show {
-  border: 1px solid #19354c;
-}
-.code-right.sizefull {
+#main {
   position: fixed;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.main-content {
+  position: absolute;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .left-bar {
-  position: fixed;
-  left: 0px;
-  top: 51px;
+  float: left;
   width: 50px;
   height: 100%;
-  background: #141414;
+  background: #10202c;
   box-shadow: 2px 0px 3px #201e1e;
   -moz-box-shadow: 2px 0px 3px #201e1e;
 }

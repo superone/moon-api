@@ -1,13 +1,15 @@
 .page-main{
-    position:fixed;
+    position:relative;
     z-index:20;
-    top:51px;
-    bottom:26px;
-    left:50px;
+    height:100%;
+    //top:51px;
+    bottom:0px;
+    //left:50px;
     //width:100%;
-    right:0px;
+    //right:0px; 
     background: #252526;
     color:#fff;
+    overflow:hidden;
     .code-edit{
         position:relative;
         box-sizing: border-box;
@@ -31,7 +33,7 @@
         //min-width:300px;
         float:left;
         > div.cont{
-            background:#252526;
+            background:#202022;
         }
         .tree{
             height:100%;
@@ -39,7 +41,7 @@
             .tree-title{
                 line-height:30px;
                 padding:0 10px;
-                background:#333333;
+                background:#2e2e2e;
                 border: 1px solid #211d1d;
                 color: #b3b6b8;
                 font-size: 14px;
@@ -61,11 +63,11 @@
                 }
             }
             .tree-cont{
-                position: absolute;
-                top:32px;
-                bottom:0px;
-                right:0px;
-                left:0px;
+                // position: absolute;
+                // top:32px;
+                // bottom:0px;
+                // right:0px;
+                // left:0px;
                 overflow-y:auto;
                 box-sizing: border-box;
                 font-size:13px;
@@ -207,7 +209,6 @@
         .card-bar:hover{
             background:#363633;
         }
-
     }
 
 }
