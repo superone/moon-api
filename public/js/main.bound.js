@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "84425248a275ed66d98f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8eca80f7f58563d5ab64"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -9900,7 +9900,7 @@ exports = module.exports = __webpack_require__(1)();
 
 
 // module
-exports.push([module.i, "\n.main-content-right {\n  padding: 5px;\n}\n.main-content-right .tab-title {\n  padding: 0 46px 0 22px;\n  position: relative;\n}\n.main-content-right .tab-title .n-bar {\n  position: absolute;\n  height: 22px;\n  width: 20px;\n  top: 2px;\n  display: block;\n  background: #333;\n}\n.main-content-right .tab-title .n-bar-left {\n  left: 0px;\n}\n.main-content-right .tab-title .n-bar-more {\n  right: 0px;\n}\n.main-content-right .tab-title .n-bar-right {\n  right: 23px;\n}\n.main-content-right .tab-title > ul {\n  overflow: hidden;\n}\n.main-content-right .tab-title > ul ol {\n  width: 100000px;\n}\n.main-content-right .tab-title > ul li {\n  position: relative;\n  float: left;\n  display: inline-block;\n  line-height: 28px;\n  text-align: center;\n  margin-left: 3px;\n  background: #333;\n  width: 150px;\n}\n.main-content-right .tab-title > ul li a {\n  display: block;\n  width: 100%;\n  height: 100%;\n  color: #787878;\n}\n.main-content-right .tab-title > ul li .close {\n  display: none;\n  width: 15px;\n  height: 15px;\n  position: absolute;\n  top: 3px;\n  right: 3px;\n  background: url(/images/icon/close-small.png) no-repeat;\n}\n.main-content-right .tab-title > ul li:hover .close {\n  display: block;\n}\n.main-content-right .tab-title > ul li:hover a {\n  color: #aaa;\n}\n.main-content-right .tab-title > ul .cur {\n  position: relative;\n  background: #1a1a1a;\n  border-bottom: 0;\n}\n.main-content-right .tab-title > ul .cur a {\n  color: #fff;\n}\n.main-content-right .tab-title > ul .cur .close {\n  display: block;\n}\n.main-content-right .right-panel {\n  overflow: auto;\n  width: 100%;\n  height: 100%;\n  background: #1a1a1a;\n  padding: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.main-content-right {\n  position: relative;\n  box-sizing: border-box;\n  height: 100%;\n  overflow: hidden;\n  padding: 5px;\n}\n.main-content-right .tab-title {\n  padding: 0 46px 0 22px;\n  position: relative;\n}\n.main-content-right .tab-title .n-bar {\n  position: absolute;\n  height: 22px;\n  width: 20px;\n  top: 2px;\n  display: block;\n  background: #333;\n}\n.main-content-right .tab-title .n-bar-left {\n  left: 0px;\n}\n.main-content-right .tab-title .n-bar-more {\n  right: 0px;\n}\n.main-content-right .tab-title .n-bar-right {\n  right: 23px;\n}\n.main-content-right .tab-title > ul {\n  overflow: hidden;\n  position: relative;\n}\n.main-content-right .tab-title > ul ol {\n  position: relative;\n  left: 0px;\n  width: 100000px;\n}\n.main-content-right .tab-title > ul li {\n  position: relative;\n  float: left;\n  display: inline-block;\n  line-height: 28px;\n  text-align: center;\n  margin-left: 3px;\n  background: #333;\n  width: 150px;\n}\n.main-content-right .tab-title > ul li a {\n  display: block;\n  width: 100%;\n  height: 100%;\n  color: #787878;\n}\n.main-content-right .tab-title > ul li .close {\n  display: none;\n  width: 15px;\n  height: 15px;\n  position: absolute;\n  top: 3px;\n  right: 3px;\n  background: url(/images/icon/close-small.png) no-repeat;\n}\n.main-content-right .tab-title > ul li:not(.cur):hover .close {\n  display: block;\n}\n.main-content-right .tab-title > ul li:not(.cur):hover a {\n  color: #aaa;\n}\n.main-content-right .tab-title > ul .cur {\n  position: relative;\n  background: #1a1a1a;\n  border-bottom: 0;\n}\n.main-content-right .tab-title > ul .cur a {\n  color: #fff;\n}\n.main-content-right .tab-title > ul .cur .close {\n  display: block;\n}\n.main-content-right .right-panel {\n  overflow: auto;\n  width: 100%;\n  height: 100%;\n  background: #1a1a1a;\n  padding: 10px;\n}\n.main-content-right .right-panel .tab-div {\n  display: none;\n}\n.main-content-right .right-panel .tab-div.cur {\n  display: block;\n}\n", ""]);
 
 // exports
 
@@ -12170,32 +12170,68 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue.extend({
     data() {
         return {
-            msg: " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! " + " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! <br> <br> <br> <br> <br> <br>" + " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! <br> <br> <br> <br> <br> <br>" + " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! <br> <br> <br> <br> <br> <br>" + " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! <br> <br> <br> <br> <br> <br>" + " hello world!  hello world!  hello world!  hello world!  hello world!  hello world!  hello world! <br> <br> <br> <br> <br> <br>"
+            titles: [{
+                title: "/(GET)"
+            }, {
+                title: "/document(GET)"
+            }, {
+                title: "../{documet_id}(GET)"
+            }, {
+                title: "../advance(GET)"
+            }, {
+                title: "/search(GET)"
+            }, {
+                title: "../{documet_id}(GET)"
+            }, {
+                title: "../advance(GET)"
+            }, {
+                title: "/search(GET)"
+            }, {
+                title: "../{documet_id}(GET)"
+            }, {
+                title: "../advance(GET)"
+            }, {
+                title: "/search(GET)"
+            }, {
+                title: "../{documet_id}(GET)"
+            }, {
+                title: "../advance(GET)"
+            }, {
+                title: "/search(GET)"
+            }],
+            olLeft: 0,
+            curTitle: 0
         };
+    },
+    computed: {
+        getOlStyle() {
+            return "left:" + this.olLeft + "px;";
+        }
     },
 
     methods: {
-        message(e) {
-            console.log(e);
+        upTabtitle(e) {
+            if (this.olLeft < 0) {
+                if (Math.abs(this.olLeft) < 80) {
+                    this.olLeft += Math.abs(this.olLeft);
+                } else {
+                    this.olLeft += 80;
+                }
+            }
+        },
+        downTabtitle(e) {
+            if (this.olLeft < 0 && Math.abs(this.olLeft) < 80) {
+                this.olLeft += Math.abs(this.olLeft);
+            } else {
+                this.olLeft -= 80;
+            }
+        },
+        changeTab(index) {
+            this.curTitle = index;
         }
     }
 }));
@@ -12207,83 +12243,69 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "main-content-right"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "tab-content right-panel"
   }, [_c('div', {
-    staticClass: "tab-div",
-    domProps: {
-      "innerHTML": _vm._s(_vm.msg)
-    }
-  }, [_vm._v("\n            " + _vm._s(_vm.msg) + "\n        ")])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
     staticClass: "tab-title"
   }, [_c('a', {
     staticClass: "n-bar n-bar-left",
     attrs: {
       "href": "javascript:;"
+    },
+    on: {
+      "click": function($event) {
+        _vm.upTabtitle($event)
+      }
     }
   }), _vm._v(" "), _c('ul', [_c('ol', {
-    staticClass: "clearfl"
-  }, [_c('li', {
-    staticClass: "cur"
-  }, [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("/(GET)")]), _vm._v(" "), _c('a', {
-    staticClass: "close",
-    attrs: {
-      "href": "javascript:;"
-    }
-  })]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("/document(GET)")]), _vm._v(" "), _c('a', {
-    staticClass: "close",
-    attrs: {
-      "href": "javascript:;"
-    }
-  })]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("../{documet_id}(GET)")]), _vm._v(" "), _c('a', {
-    staticClass: "close",
-    attrs: {
-      "href": "javascript:;"
-    }
-  })]), _vm._v(" "), _c('li', {}, [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("/(GET)")]), _vm._v(" "), _c('a', {
-    staticClass: "close",
-    attrs: {
-      "href": "javascript:;"
-    }
-  })]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("/document(GET)")]), _vm._v(" "), _c('a', {
-    staticClass: "close",
-    attrs: {
-      "href": "javascript:;"
-    }
-  })])])]), _vm._v(" "), _c('a', {
+    staticClass: "clearfl",
+    style: (_vm.getOlStyle)
+  }, _vm._l((_vm.titles), function(item, index) {
+    return _c('li', {
+      class: [_vm.curTitle == index ? 'cur' : '']
+    }, [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      },
+      on: {
+        "click": function($event) {
+          _vm.changeTab(index)
+        }
+      }
+    }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c('a', {
+      staticClass: "close",
+      attrs: {
+        "href": "javascript:;"
+      }
+    })])
+  }))]), _vm._v(" "), _c('a', {
     staticClass: "n-bar n-bar-right",
     attrs: {
       "href": "javascript:;"
+    },
+    on: {
+      "click": _vm.downTabtitle
     }
   }), _vm._v(" "), _c('a', {
     staticClass: "n-bar n-bar-more",
     attrs: {
       "href": "javascript:;"
     }
-  })])
-}]}
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "tab-content right-panel"
+  }, _vm._l((_vm.titles), function(item, index) {
+    return _c('div', {
+      staticClass: "tab-div",
+      class: [_vm.curTitle == index ? 'cur' : '']
+    }, [_c('font', {
+      staticStyle: {
+        "color": "red",
+        "font-size": "50px"
+      },
+      attrs: {
+        "size": "50"
+      }
+    }, [_vm._v(":" + _vm._s(index) + ":" + _vm._s(item.title))])], 1)
+  }))])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (true) {
   module.hot.accept()
